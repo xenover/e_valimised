@@ -1,0 +1,45 @@
+#body
+{
+font-family: Sans-Serif;
+font-size:14px
+}
+
+.logiSisse
+{
+position:relative;
+float:left;
+top:-20px;
+top: 0px;
+padding:8px
+}*/
+
+.logged_in
+{
+position:relative;
+float:right;
+top:-60px;
+padding:8px
+}*/
+
+.logo
+{
+  float:left;
+  margin: 10px;
+}
+
+.menu_item
+{
+font-weight: bold;
+background-color: #b0c4de;
+float: left;
+margin: 2px;
+padding: 2px;
+border: 1px solid;
+border-radius: 5px
+}
+
+.login
+{
+	float:right;
+	margin: 10px;
+}
