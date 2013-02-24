@@ -1,0 +1,46 @@
+#wrap { 
+  width: 800px; 
+  margin: 0 auto;
+  font-family: Sans-Serif;
+	font-size:14px;
+	position: relative
+}
+
+.logged_in
+{
+position:absolute;
+float:right;
+bottom:-20px;
+	
+}*/
+
+.logo
+{
+  position:absolute;
+  top:30px;
+  left:70px;
+  margin: 10px;
+}
+
+.menu_item
+{
+font-weight: bold;
+background-color: #b0c4de;
+float: left;
+margin: 2px;
+padding: 2px;
+border: 1px solid;
+border-radius: 5px
+}
+
+.login
+{
+	position:absolute;
+	top:22%;
+	margin: 10px;
+}
+
+#logged_in_cell
+{
+text-align:right
+}
