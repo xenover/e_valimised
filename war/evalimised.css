@@ -1,29 +1,24 @@
-#body
-{
-font-family: Sans-Serif;
-font-size:14px
+#wrap { 
+  width: 800px; 
+  margin: 0 auto;
+  font-family: Sans-Serif;
+	font-size:14px;
+	position: relative
 }
-
-.logiSisse
-{
-position:relative;
-float:left;
-top:-20px;
-top: 0px;
-padding:8px
-}*/
 
 .logged_in
 {
-position:relative;
+position:absolute;
 float:right;
-top:-60px;
-padding:8px
+bottom:-20px;
+	
 }*/
 
 .logo
 {
-  float:left;
+  position:absolute;
+  top:30px;
+  left:70px;
   margin: 10px;
 }
 
@@ -40,6 +35,12 @@ border-radius: 5px
 
 .login
 {
-	float:right;
+	position:absolute;
+	top:22%;
 	margin: 10px;
+}
+
+#logged_in_cell
+{
+text-align:right
 }
