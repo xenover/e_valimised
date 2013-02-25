@@ -1,3 +1,5 @@
+/*Üldised*/
+
 #wrap { 
   width: 800px; 
   margin: 0 auto;
@@ -11,14 +13,10 @@
 position:absolute;
 float:right;
 bottom:-20px;
-	
 }*/
 
 .logo
 {
-  position:absolute;
-  top:30px;
-  left:70px;
   margin: 10px;
 }
 
@@ -36,7 +34,7 @@ border-radius: 5px
 .login
 {
 	position:absolute;
-	top:22%;
+	top:35px;
 	margin: 10px;
 }
 
@@ -44,3 +42,19 @@ border-radius: 5px
 {
 text-align:right
 }
+
+/*statistika.html*/
+#chart_pie
+{
+	position:absolute;
+	bottom: 0px;
+	left: 380px;
+}
+
+#statistika_erakonnad
+{
+	position:absolute;
+	top:94.5%;
+	left:50%;
+}
+
