@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>E-valimised: kandideeri</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+</head>
+<body>
+<div id="wrap">
+	
+	<table border="0" width="700">
+	<tr  id="mittePrintida">
+		<td><img class="logo" src="files/logo.png" alt="Logo" width="120"></img>
+			<input class='login' type='image' class="logiSisse" src='files/google.png'>
+		</td>
+	  <td id="logged_in_cell">
+        <div id='logged_in'>Sisse logitud kasutajana:</div>
+      <div id='user'><a href="seaded.html">Peeter Paan</a></div>
+      <div id='logout'><a href="seelinkveeleitoota.html">LOGI VÄLJA</a></div>
+	  </td>
+	</tr>
+	<tr>
+	<td id="menu" colspan="2">
+    <a class='menu_item'href="index.html" target=_self>AVALEHT</a>
+    <a class='menu_item'href="haaletamine.html" target=_self>HÄÄLETAMINE</a>
+    <a class='menu_item'href="statistika.html" target=_self>STATISTIKA</a>
+    <a class='menu_item'href="kandideeri.html" target=_self>SEA ENDA KANDIDATUUR</a>
+	</td>
+	</tr>
+	<tr>
+	<td colspan="2">
+	<br>
+	<div>
+	<br><b>Eesnimi*</b> Peeter</br>
+	<br><b>Perenimi*</b> Paan</br>
+	<br><b>Sünniaeg <br>
+	(pp.kk.aa)*</b> 01.01.1970</br>
+	<br><b>Isikukood*</b> 30101701234</br>
+	<br><b>Elukoht*</b> Männipuu 2 - oks 6</br>
+	<br><b>E-mail*</b> 
+	<input type="text" size="25" maxlength="30"> 
+	</br>
+	<br><b>Telefon*</b> 
+	<input type="text" size="25" maxlength="30"> 
+	</br> </br> 
+	<br><b>Perekonnaseis*</b>
+	<select><option>-Valik-<option> Vallaline <option> Abielus</select>
+	</br>
+	<br><b>Haridus*</b>
+	<select><option>-Valik-<option> Põhiharidus <option> Keskharidus <option>Kõrgharidus
+	</select>
+	</br>
+	<br><b>Amet* </b>
+	<input type="text" size="25" maxlength="30">
+	</br>
+	<br><b>Asutus*</b> 
+	<input type="text" size="25" maxlength="30">
+	</br>
+	<br><b>Maakond </b> Tartumaa</br>
+	</div>
+	<div id="chart_pie" style="width: 350px; height: 470px;">
+	<br><b>Erakond* </b>
+	<select>
+	<option>-Valik-
+	<option>Iseseseisvuspartei
+	<option>Keskerakond 
+	<option>Reformierakond
+	<option>Rahvaerakond
+	<option>Vabaduspartei
+	<option>Vasakpartei
+	<option>Kristlikud Demokraadid
+	<option>Eestimaa Rohelised
+	<option>Isamaa ja Res Publica Liit
+	<option>Sotisaaldemokraadid
+	</select></br>
+	<br><b>Pilt*</b>  <!--TULEKS YLE VAADATA--> 
+	<input type="file" name="uploadFile">
+	<input type="hidden" name="MAX_FILE_SIZE" value="15000">
+	<input type="submit" value="Lisa">
+	</br>
+	<br><b>CV*</b>
+	<input type="file" name="uploadFile">
+	<input type="hidden" name="MAX_FILE_SIZE" value="1500" />
+	<input type="submit" value="Lisa">
+	</br>
+	<br><b>Lisainfo</b>
+	<textarea name="lisainfo" rows="4" cols="40">
+	</textarea>
+	</br>
+	</div>
+	
+	
+	</td>
+	</tr>
+	</table>
+
+</div>
+</body>
+</html>

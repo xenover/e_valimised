@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>E-valimised: statistika</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Erakond', 'Hääli'],
+          ['Reformierakond',     5000],
+          ['Rahvaliit',      5000],
+          ['IRL',  2000],
+        ]);
+
+        var options = {
+          title: 'Häälte jagunemine erakonniti'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_pie'));
+        chart.draw(data, options);
+      }
+    </script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Kandidaat', 'Hääli', ''],
+          ['Priit Muhkel',  1000,      0],
+          ['Mann Puu',  900,      0],
+          ['Anne Linn',  800,       0],
+          ['Jüri Mardikas',  700,      0]
+        ]);
+
+        var options = {
+          title: 'Näidis tulpdiagramm',
+          hAxis: {title: 'Kandidaat', titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+<div id="wrap">
+	
+	<table border="0" width="700">
+	<tr  id="mittePrintida">
+		<td><img class="logo" src="files/logo.png" alt="Logo" width="120"></img>
+			<input class='login' type='image' class="logiSisse" src='files/google.png'>
+		</td>
+	  <td id="logged_in_cell">
+        <div id='logged_in'>Sisse logitud kasutajana:</div>
+      <div id='user'><a href="seaded.html">Peeter Paan</a></div>
+      <div id='logout'><a href="seelinkveeleitoota.html">LOGI VÄLJA</a></div>
+	  </td>
+	</tr>
+	<tr>
+	<td id="menu" colspan="2">
+    <a class='menu_item'href="index.html" target=_self>AVALEHT</a>
+    <a class='menu_item'href="haaletamine.html" target=_self>HÄÄLETAMINE</a>
+    <a class='menu_item'href="statistika.html" target=_self>STATISTIKA</a>
+    <a class='menu_item'href="kandideeri.html" target=_self>SEA ENDA KANDIDATUUR</a>
+	</td>
+	</tr>
+	<tr>
+	<td colspan="2">
+	<div id="regioon">Vali regioon:<form action = "">
+    <select name = "Regioon">
+	<option value="riik">Kogu riik</option>
+    <option value="harju">Harjumaa</option>
+    <option value="hiiu">Hiiumaa</option>
+    <option value="idaviru">Ida-Virumaa</option>
+	<option value="jogeva">Jõgevamaa</option>
+    <option value="jarva">Järvamaa</option>
+    <option value="laane">Läänemaa</option>
+    <option value="laaneviru">Lääne-Virumaa</option>
+	<option value="polva">Põlvamaa</option>
+    <option value="parnu">Pärnumaa</option>
+    <option value="rapla">Raplamaa</option>
+    <option value="saare">Saaremaa</option>
+	<option value="tallinn">Tallinn</option>
+	<option value="tartu">Tartu</option>
+	<option value="tartumaa">Tartumaa</option>
+	<option value="valga">Valgamaa</option>
+	<option value="viljandi">Viljandimaa</option>
+	<option value="voru">Võrumaa</option>
+    </select>
+	</form></div>
+	<div id="chart_div" style="width: 350px; height: 350px;"></div>
+  <!--Nii see tegelikult töötama ei peaks-->
+    <a href="isikute_statistika.html" target="pop" onclick="pop=window.open(this.href,'pop','width=700,height=400');"><input id="statistika_isikud" type="submit" value="Täpsem statistika"></a>
+	<div id="chart_pie" style="width: 350px; height: 350px;"></div>
+	    <a href="erakondade_statistika.html" target="pop" onclick="pop=window.open(this.href,'pop','width=700,height=400');"><input id="statistika_erakonnad" type="submit" value="Täpsem statistika"></a>
+	</td>
+	</tr>
+	</table>
+		
+
+</div>
+</body>
+</html>
