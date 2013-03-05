@@ -1,14 +1,36 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Erakondade statistika</title>
-	<base href="C:/Users/Kodu/Desktop/evalimised/e_valimised/war/" target="_blank">
-	<link rel="stylesheet" type="text/css" href="stylesheets/tabel.css" media="screen">
+	<title>E-valimised: avaleht</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 </head>
-<html>
 <body>
-<div id="keha">
+<div id="wrap">
+	
+	<table border="0" width="700">
+	<tr id="mittePrintida">
+		<td><img class="logo" src="files/logo.png" alt="Logo" width="120"></img>
+			<input class='login' type='image' class="logiSisse" src='files/google.png'>
+		</td>
+	  <td id="logged_in_cell">
+	  		<div id='logged_in'>Sisse logitud kasutajana:</div>
+			<div id='user'><a href="seaded.html">Peeter Paan</a></div>
+			<div id='logout'><a href="seelinkveeleitoota.html">LOGI VÄLJA</a></div>
+	  </td>
+	</tr>
+	<tr>
+	<td id="menu" colspan="2">
+    <a class='menu_item'href="index.html" target=_self>AVALEHT</a>
+    <a class='menu_item'href="haaletamine.html" target=_self>HÄÄLETAMINE</a>
+    <a class='menu_item'href="statistika.html" target=_self>STATISTIKA</a>
+    <a class='menu_item'href="kandideeri.html" target=_self>SEA ENDA KANDIDATUUR</a>
+	</td>
+	</tr>
+	<tr>
+	<td colspan="2">
+	<div id="keha">
 <table>
 <tr>
 <td>Regioon: </td>
@@ -44,6 +66,11 @@
 <th>Erakond</th>
 <th>Hääli</th>
 </table>
+</div>
+	</td>
+	</tr>
+	</table>
+
 </div>
 </body>
 </html>
