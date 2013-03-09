@@ -58,3 +58,13 @@ text-align:right
 	left:50%;
 }
 
+
+.fail
+{
+	background-color: #FF3333;
+}
+
+.err_fail
+{
+	color:red;
+}
