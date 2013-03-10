@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="scripts/heartcode-canavasloader.js"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -49,7 +50,7 @@
       }
     </script>
 </head>
-<body>
+<body onload="loader()">
 <div id="wrap">
 	
 	<table border="0" width="700">
@@ -95,11 +96,17 @@
 	<option value="voru">Võrumaa</option>
     </select>
 	</form></div>
-	<div id="chart_div" style="width: 350px; height: 350px;"></div>
   <!--Nii see tegelikult töötama ei peaks-->
-    <a href="isikute_statistika.html" target="_self"><input id="statistika_isikud" type="submit" value="Täpsem statistika"></a>
+  <div id="statistika_tekst">Palun oota, genereerin statistikat!</div>
+  <div id="cl_square"></div>
+  <div class="statistika">
+	<div id="chart_div" style="width: 350px; height: 350px;"></div>
+  </div>
+  <a href="isikute_statistika.html" target="_self"><input id="statistika_isikud" type="submit" value="Täpsem statistika"></a>
+  <div class="statistika">
 	<div id="chart_pie" style="width: 350px; height: 350px;"></div>
-	    <a href="erakondade_statistika.html" target="_self"><input id="statistika_erakonnad" type="submit" value="Täpsem statistika"></a>
+  </div>
+	<a href="erakondade_statistika.html" target="_self"><input id="statistika_erakonnad" type="submit" value="Täpsem statistika"></a>
 	</td>
 	</tr>
 	</table>

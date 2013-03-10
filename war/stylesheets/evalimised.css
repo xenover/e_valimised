@@ -58,6 +58,26 @@ text-align:right
 	left:50%;
 }
 
+.statistika
+{
+	visibility:hidden;
+}
+
+ #statistika_tekst
+ {
+ 	position:absolute;
+	top: 300px;
+	left: 190px;
+	bottom:-20px;
+ }
+
+#cl_square
+{
+	position:absolute;
+	top: 325px;
+	left:280px;
+	bottom:-20px;
+}
 
 .fail
 {
