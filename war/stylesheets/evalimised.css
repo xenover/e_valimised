@@ -88,3 +88,26 @@ text-align:right
 {
 	color:red;
 }
+
+.vasakule
+{
+	float: left;
+	width: 100px;
+}
+
+#otsi
+{
+	float:right;
+	margin-top: 15px;
+}
+
+#erakond
+{
+	width:120px;
+}
+
+#regioon
+{
+	width:120px;
+	margin-left:20px;
+}
