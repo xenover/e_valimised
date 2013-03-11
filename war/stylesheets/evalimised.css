@@ -116,3 +116,20 @@ font-weight: bold;
 {
 	color:red;
 }
+
+
+.vasakule
+{
+	float: left;
+	margin-right:10px;
+}
+
+.nimekiri
+{
+	height:22px;
+}
+
+#otsi
+{
+	height:42px;
+}

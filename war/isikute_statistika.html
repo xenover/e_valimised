@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html>
+<!-- -- -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>E-valimised: hääleta</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-	<link rel="stylesheet" href="stat_stiil.css" />
-	<script type="text/javascript" src="script/stat_javascript.js"></script>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>E-valimised: hääleta</title>
+ <link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+ <!-- -------- -->
+ <link rel="stylesheet" type="text/css" href="stylesheets/stat_stiil.css" media="screen">
+ <script type="text/javascript" src="scripts/stat_javascript.js"></script>
+ <!-- ------- -->
 </head>
 <body>
+ <div id="keha">
 <table>
 <tr>
 <td>Regioon: </td>
 <td><div id="regioon"><form action = "">
     <select name = "Regioon">
-	<option value="riik">Kogu riik</option>
+ <option value="riik">Kogu riik</option>
     <option value="harju">Harjumaa</option>
     <option value="hiiu">Hiiumaa</option>
     <option value="idaviru">Ida-Virumaa</option>
-	<option value="jogeva">Jõgevamaa</option>
+ <option value="jogeva">Jõgevamaa</option>
     <option value="jarva">Järvamaa</option>
     <option value="laane">Läänemaa</option>
     <option value="laaneviru">Lääne-Virumaa</option>
-	<option value="polva">Põlvamaa</option>
+ <option value="polva">Põlvamaa</option>
     <option value="parnu">Pärnumaa</option>
     <option value="rapla">Raplamaa</option>
     <option value="saare">Saaremaa</option>
-	<option value="tallinn">Tallinn</option>
-	<option value="tartu">Tartu</option>
-	<option value="tartumaa">Tartumaa</option>
-	<option value="valga">Valgamaa</option>
-	<option value="viljandi">Viljandimaa</option>
-	<option value="voru">Võrumaa</option>
+ <option value="tallinn">Tallinn</option>
+ <option value="tartu">Tartu</option>
+ <option value="tartumaa">Tartumaa</option>
+ <option value="valga">Valgamaa</option>
+ <option value="viljandi">Viljandimaa</option>
+ <option value="voru">Võrumaa</option>
     </select>
-	</form></div></td>
+ </form></div></td>
 </tr>
 </table>
-
 <div id="mittePrintida">
 <table>
 <tr>
@@ -51,78 +57,80 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr">
 <td>
 Erakond:<div id="erakond"><form action = "">
     <select name = "Erakond">
-	<option value="">Vali erakond</option>
+ <option value="">Vali erakond</option>
     <option value="reformierakond">Reformierakond</option>
     <option value="irl">IRL</option>
     <option value="rahvaliit">Rahvaliit</option>
     </select>
-	</form></div>
+ </form></div>
 </td>
 </tr>
 </table>
 <input type="submit" value="OTSI">
-</div>
-
-
-<table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
-		<tr>
+</div> 
+ </td>
+ </tr>
+ </table>
+<!-- ----------------- -->
+<div id="wrapper">
+ <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
+  <tr>
 <!-class="nosort">
-			<th>ID</th>
-			<th>Nimi</th>
-			<th>Erakond</th>
-			<th>Regioon</th>
-			<th>Amet</th>
-			<th>Hääli</th>
-			
-		</tr>
-		<tr>
-			<td>76</td>
-			<td>Edgar</td>
-			<td>Keskerakond</td>
-			<td>Tallinna linn</td>
-			<td>MUPO</td>
-			<td>346</td>
-		</tr>
-		<tr>
-			<td>77</td>
-			<td>Andrus</td>
-			<td>Reformierakond</td>
-			<td>Tallinna linn</td>
-			<td>Orav</td>
-			<td>4802</td>
-		</tr>
-		<tr>
-			<td>78</td>
-			<td>Jumal</td>
-			<td>Kristlikud demokraadid</td>
-			<td>Tartu linn</td>
-			<td>jumal</td>
-			<td>2346</td>
-		</tr>
-		<tr>
-			<td>79</td>
-			<td>Pentus</td>
-			<td>Reformierakond</td>
-			<td>Harju maakond</td>
-			<td>Riigikogu liige</td>
-			<td>1987</td>
-		</tr>
-		<tr>
-			<td>80</td>
-			<td>Aaviksoo</td>
-			<td>IRL</td>
-			<td>Tartu linn</td>
-			<td>Haridusminister</td>
-			<td>555</td>
-		</tr>
-		<tr>
-			<td>81</td>
-			<td>Gräzin</td>
-			<td>Reformierakond</td>
-			<td>Harju maakond</td>
-			<td>Jurist</td>
-			<td>1236</td>
-		</tr>
-	</table>
+   <th>ID</th>
+   <th>Eesnimi</th>
+   <th>Perenimi</th>
+   <th>Erakond</th>
+   <th>Hääli</th>
+   
+  </tr>
+  <tr>
+   <td>76</td>
+   <td>Edgar</td>
+   <td>Savisaar</td>
+   <td>Keskerakond</td>
+   <td>346</td>
+  </tr>
+  <tr>
+   <td>77</td>
+   <td>Andrus</td>
+   <td>Ansip</td>
+   <td>Reformierakond</td>
+   <td>4802</td>
+  </tr>
+  <tr>
+   <td>78</td>
+   <td>Juku-Kalle</td>
+   <td>Raid</td>
+   <td>IRL</td>
+   <td>2346</td>
+  </tr>
+  <tr>
+   <td>79</td>
+   <td>Aivar</td>
+   <td>Riisalu</td>
+   <td>Keskerakond</td>
+   <td>1987</td>
+  </tr>
+  <tr>
+   <td>80</td>
+   <td>Jaak</td>
+   <td>Aaviksoo</td>
+   <td>IRL</td>
+   <td>555</td>
+  </tr>
+  <tr>
+   <td>81</td>
+   <td>Igor</td>
+   <td>Gräzin</td>
+   <td>Reformierakond</td>
+   <td>1236</td>
+  </tr>
+ </table>
+</div>
+<script type="text/javascript">
+var sorter=new table.sorter("sorter");
+sorter.init("sorter",1);
+</script>
+<!-- ------------------ -->
 </body>
 </html>
