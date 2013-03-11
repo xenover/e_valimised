@@ -1,93 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>E-valimised: statistika</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-	<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
-  <script type="text/javascript" src="scripts/menyySkript.js"></script>
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Erakond', 'Hääli'],
-          ['Reformierakond',     5000],
-          ['Rahvaliit',      5000],
-          ['IRL',  2000],
-        ]);
-
-        var options = {
-          title: 'Häälte jagunemine erakonniti'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart_pie'));
-        chart.draw(data, options);
-      }
-    </script>
-
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Kandidaat', 'Hääli', ''],
-          ['Priit Muhkel',  1000,      0],
-          ['Mann Puu',  900,      0],
-          ['Anne Linn',  800,       0],
-          ['Jüri Mardikas',  700,      0]
-        ]);
-
-        var options = {
-          title: 'Näidis tulpdiagramm',
-          hAxis: {title: 'Kandidaat', titleTextStyle: {color: 'red'}}
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>E-valimised: statistika</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="scripts/heartcode-canavasloader.js"></script>
+  <script type="text/javascript" src="scripts/hmenyyscript.js"></script>
 </head>
 <body onload="loader()">
-  <!--REGIOONI VALIMINE-->
-	<div id="regioon">Vali regioon:<form action = "">
+<div id="wrap">
+  <div  id="mittePrintida">
+
+  <div id="regioon">Vali regioon:<form action = "">
     <select name = "Regioon">
-	<option value="riik">Kogu riik</option>
+  <option value="riik">Kogu riik</option>
     <option value="harju">Harjumaa</option>
     <option value="hiiu">Hiiumaa</option>
     <option value="idaviru">Ida-Virumaa</option>
-	<option value="jogeva">Jõgevamaa</option>
+  <option value="jogeva">Jõgevamaa</option>
     <option value="jarva">Järvamaa</option>
     <option value="laane">Läänemaa</option>
     <option value="laaneviru">Lääne-Virumaa</option>
-	<option value="polva">Põlvamaa</option>
+  <option value="polva">Põlvamaa</option>
     <option value="parnu">Pärnumaa</option>
     <option value="rapla">Raplamaa</option>
     <option value="saare">Saaremaa</option>
-	<option value="tallinn">Tallinn</option>
-	<option value="tartu">Tartu</option>
-	<option value="tartumaa">Tartumaa</option>
-	<option value="valga">Valgamaa</option>
-	<option value="viljandi">Viljandimaa</option>
-	<option value="voru">Võrumaa</option>
+  <option value="tallinn">Tallinn</option>
+  <option value="tartu">Tartu</option>
+  <option value="tartumaa">Tartumaa</option>
+  <option value="valga">Valgamaa</option>
+  <option value="viljandi">Viljandimaa</option>
+  <option value="voru">Võrumaa</option>
     </select>
-	</form>
-  </div>
-  <!--Nii see tegelikult töötama ei peaks-->
-    <div id="cl_square"></div>
+  </form></div>
   <div id="statistika_tekst">Palun oota, genereerin statistikat!</div>
+  <div id="loader"><img src="files/ajax-loader.gif"></div>
+  <div id="cl_square"></div>
   <div class="statistika">
-	<div id="chart_div" style="width: 350px; height: 350px;"></div>
+  <div id="chart_div" style="width: 350px; height: 350px;"><img style="width:300px; height:300px" src="files/barchart.png"></div>
   </div>
   <input id="statistika_isikud" type="submit" value="Täpsem statistika">
   <div class="statistika">
-	<div id="chart_pie" style="width: 350px; height: 350px;"></div>
+  <div id="chart_pie" style="width: 300px; height: 300px;"><img style="width:250px; height:250  px" src="files/piechart.png"></div>
   </div>
-	<a href="erakondade_statistika.html" target="_self"><input id="statistika_erakonnad" type="submit" value="Täpsem statistika"></a>
+  <input id="statistika_erakonnad" type="submit" value="Täpsem statistika">
+</div>
 </body>
 </html>

@@ -10,6 +10,7 @@ $(document).ready(function(){
   		$("#keha").empty();
     	$("#keha").load("statistika.html");
       setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
+      setTimeout(function(){document.getElementById("loader").style.visibility="hidden";},1500);
       setTimeout(function(){document.getElementById("chart_pie").style.visibility="visible";},1500);
       setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
   	});
@@ -24,5 +25,9 @@ $(document).ready(function(){
   $("#kandideeri").click(function(){
     $("#keha").empty();
     $("#keha").load("kandideeri.html");
+  });
+  $("#statistika_isikud").click(function(){
+    $("#keha").empty();
+    $("#keha").load("isikute_statitstika.html");
   });
 });

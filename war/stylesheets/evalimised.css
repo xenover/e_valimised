@@ -4,8 +4,8 @@
   width: 800px; 
   margin: 0 auto;
   font-family: Sans-Serif;
-	font-size:14px;
-	position: relative
+font-size:14px;
+   position: relative
 }
 
 .logged_in
@@ -65,18 +65,25 @@ font-weight: bold;
 }
 
 /*statistika.html*/
+#loader
+{
+	position: absolute;
+	top: 180px;
+	left:370px;
+}
+
 #chart_pie
 {
-	position:relative;
-	bottom: 0px;
-	left: 380px;
+	position:absolute;
+	bottom: 70px;
+	left: 450px;
 }
 
 #statistika_erakonnad
 {
-	position:absolute;
-	top:94.5%;
-	left:50%;
+	position:relative;
+	top:-30px;
+	left:450px;
 }
 
 .statistika
@@ -87,15 +94,15 @@ font-weight: bold;
  #statistika_tekst
  {
  	position:absolute;
-	top: 300px;
-	left: 190px;
+	top: 150px;
+	left: 250px;
 	bottom:-20px;
  }
 
 #cl_square
 {
 	position:absolute;
-	top: 325px;
+	top: 0px;
 	left:280px;
 	bottom:-20px;
 }

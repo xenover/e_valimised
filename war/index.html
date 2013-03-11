@@ -7,57 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 	<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="scripts/menyySkript.js"></script>
-
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Erakond', 'Hääli'],
-          ['Reformierakond',     5000],
-          ['Rahvaliit',      5000],
-          ['IRL',  2000],
-        ]);
-
-        var options = {
-          title: 'Häälte jagunemine erakonniti'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart_pie'));
-        chart.draw(data, options);
-      }
-    </script>
-
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Kandidaat', 'Hääli', ''],
-          ['Priit Muhkel',  1000,      0],
-          ['Mann Puu',  900,      0],
-          ['Anne Linn',  800,       0],
-          ['Jüri Mardikas',  700,      0]
-        ]);
-
-        var options = {
-          title: 'Näidis tulpdiagramm',
-          hAxis: {title: 'Kandidaat', titleTextStyle: {color: 'red'}}
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
 </head>
 <body>
 <div id="wrap">
 	
-	<table border="0" width="700">
+	<table border="0" width="820">
 	<tr id="mittePrintida">
 		<td><img class="logo" src="files/logo.png" alt="Logo" width="120"></img>
 			<input class='login' type='image' class="logiSisse" src='files/google.png'>
@@ -79,6 +33,7 @@
 	<tr>
 	<td colspan="2">
 	<div id="keha">
+		<div id="chart_div" style="width: 350px; height: 350px;"></div>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 	</div>
 	</td>
