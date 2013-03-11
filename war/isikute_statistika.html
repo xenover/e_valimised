@@ -3,33 +3,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>E-valimised: hääleta</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	<link rel="stylesheet" href="stat_stiil.css" />
+	<script type="text/javascript" src="script/stat_javascript.js"></script>
 </head>
 <body>
-<div id="wrap">
-	
-	<table border="0" width="700">
-	<tr id="mittePrintida">
-		<td><img class="logo" src="files/logo.png" alt="Logo" width="120"></img>
-			<input class='login' type='image' class="logiSisse" src='files/google.png'>
-		</td>
-	  <td id="logged_in_cell">
-	  		<div id='logged_in'>Sisse logitud kasutajana:</div>
-			<div id='user'><a href="seaded.html">Peeter Paan</a></div>
-			<div id='logout'><a href="seelinkveeleitoota.html">LOGI VÄLJA</a></div>	  </td>
-	</tr>
-	<tr>
-	<td id="menu" colspan="2" >
-    <a class='menu_item'href="index.html" target=_self>AVALEHT</a>
-    <a class='menu_item'href="haaletamine.html" target=_self>HÄÄLETAMINE</a>
-    <a class='menu_item'href="statistika.html" target=_self>STATISTIKA</a>
-    <a class='menu_item'href="kandideeri.html" target=_self>SEA ENDA KANDIDATUUR</a>
-	</td>
-	</tr>
-	<tr>
-	<td colspan="2">
-	<div id="keha">
 <table>
 <tr>
 <td>Regioon: </td>
@@ -57,6 +35,7 @@
 	</form></div></td>
 </tr>
 </table>
+
 <div id="mittePrintida">
 <table>
 <tr>
@@ -83,18 +62,67 @@ Erakond:<div id="erakond"><form action = "">
 </table>
 <input type="submit" value="OTSI">
 </div>
-<table>
-<th>Kandidaadi #</th>
-<th>Eesnimi</th>
-<th>Perenimi</th>
-<th>Erakond</th>
-<th>Hääli</th>
-</table>
-</div>	
-	</td>
-	</tr>
-	</table>
 
-</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
+		<tr>
+<!-class="nosort">
+			<th>ID</th>
+			<th>Nimi</th>
+			<th>Erakond</th>
+			<th>Regioon</th>
+			<th>Amet</th>
+			<th>Hääli</th>
+			
+		</tr>
+		<tr>
+			<td>76</td>
+			<td>Edgar</td>
+			<td>Keskerakond</td>
+			<td>Tallinna linn</td>
+			<td>MUPO</td>
+			<td>346</td>
+		</tr>
+		<tr>
+			<td>77</td>
+			<td>Andrus</td>
+			<td>Reformierakond</td>
+			<td>Tallinna linn</td>
+			<td>Orav</td>
+			<td>4802</td>
+		</tr>
+		<tr>
+			<td>78</td>
+			<td>Jumal</td>
+			<td>Kristlikud demokraadid</td>
+			<td>Tartu linn</td>
+			<td>jumal</td>
+			<td>2346</td>
+		</tr>
+		<tr>
+			<td>79</td>
+			<td>Pentus</td>
+			<td>Reformierakond</td>
+			<td>Harju maakond</td>
+			<td>Riigikogu liige</td>
+			<td>1987</td>
+		</tr>
+		<tr>
+			<td>80</td>
+			<td>Aaviksoo</td>
+			<td>IRL</td>
+			<td>Tartu linn</td>
+			<td>Haridusminister</td>
+			<td>555</td>
+		</tr>
+		<tr>
+			<td>81</td>
+			<td>Gräzin</td>
+			<td>Reformierakond</td>
+			<td>Harju maakond</td>
+			<td>Jurist</td>
+			<td>1236</td>
+		</tr>
+	</table>
 </body>
 </html>

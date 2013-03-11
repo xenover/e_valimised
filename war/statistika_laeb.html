@@ -8,50 +8,7 @@
 	<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="scripts/menyySkript.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Erakond', 'Hääli'],
-          ['Reformierakond',     5000],
-          ['Rahvaliit',      5000],
-          ['IRL',  2000],
-        ]);
-
-        var options = {
-          title: 'Häälte jagunemine erakonniti'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart_pie'));
-        chart.draw(data, options);
-      }
-    </script>
-
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Kandidaat', 'Hääli', ''],
-          ['Priit Muhkel',  1000,      0],
-          ['Mann Puu',  900,      0],
-          ['Anne Linn',  800,       0],
-          ['Jüri Mardikas',  700,      0]
-        ]);
-
-        var options = {
-          title: 'Näidis tulpdiagramm',
-          hAxis: {title: 'Kandidaat', titleTextStyle: {color: 'red'}}
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
+  <script type="text/javascript" src="scripts/heartcode-canavasloader.js"></script>
 </head>
 <body onload="loader()">
   <!--REGIOONI VALIMINE-->
@@ -79,14 +36,11 @@
 	</form>
   </div>
   <!--Nii see tegelikult töötama ei peaks-->
-    <div id="cl_square"></div>
   <div id="statistika_tekst">Palun oota, genereerin statistikat!</div>
   <div class="statistika">
-	<div id="chart_div" style="width: 350px; height: 350px;"></div>
   </div>
   <input id="statistika_isikud" type="submit" value="Täpsem statistika">
   <div class="statistika">
-	<div id="chart_pie" style="width: 350px; height: 350px;"></div>
   </div>
 	<a href="erakondade_statistika.html" target="_self"><input id="statistika_erakonnad" type="submit" value="Täpsem statistika"></a>
 </body>

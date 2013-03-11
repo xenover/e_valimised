@@ -650,8 +650,8 @@ function loader()
 	cl2.setFPS(12);
 	cl2.setRange(0.95);
 	cl2.show();
-	setTimeout(function(){cl2.hide()},1500);
-	setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
-	setTimeout(function(){document.getElementById("chart_pie").style.visibility="visible";},1500);
-	setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
+	// setTimeout(function(){cl2.hide()},1500);
+	// setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
+	// setTimeout(function(){document.getElementById("chart_pie").style.visibility="visible";},1500);
+	// setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
 };
