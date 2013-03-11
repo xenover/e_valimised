@@ -1,2 +1,0 @@
-serviceClass: com.math.ut.ee.ktt.client.GreetingService
-path: 71D95BECE3CBE0CE48466EE80C3EC8BC.gwt.rpc
