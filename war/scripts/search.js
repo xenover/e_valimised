@@ -8,6 +8,7 @@ function search() {
   var region = $("#regioon");
 
   $("#tabel").remove();
+  $("#error").remove();
   
   if ($("#nimi").val().length > 0) {
   	candidate();
@@ -18,7 +19,7 @@ function search() {
   } else if ($("#regioon").val().length > 0) {
   	byRegion();
   } else {
-  	$("#results").after("Tühi otsing, palun valige vähemalt üks ülalnimetatud väljadest");
+  	$("#results").after("<div id=\"error\">Tühi otsing, palun valige vähemalt üks ülalnimetatud väljadest</div>");
   }
 }
 

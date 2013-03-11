@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $("#statistika_isikud").click(function(){
+    $("#keha").empty();
+    $("#keha").load("isikute_statistika.html");
+  });
+  $("#statistika_erakonnad").click(function(){
+    $("#keha").empty();
+    $("#keha").load("erakondade_statistika.html");
+  });
+});

@@ -1,3 +1,4 @@
+
 var table=function(){
 	function sorter(n){
 		this.n=n; this.t; this.b; this.r; this.d; this.p; this.w; this.a=[]; this.l=0
@@ -56,6 +57,3 @@ var table=function(){
 	}
 	return{sorter:sorter}
 }();
-
-var sorter=new table.sorter("sorter");
-sorter.init("sorter",1);

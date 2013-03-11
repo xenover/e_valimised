@@ -28,6 +28,6 @@ $(document).ready(function(){
   });
   $("#statistika_isikud").click(function(){
     $("#keha").empty();
-    $("#keha").load("isikute_statitstika.html");
+    $("#keha").load("isikute_statistika.html");
   });
 });
