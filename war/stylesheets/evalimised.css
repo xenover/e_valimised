@@ -1,11 +1,11 @@
 /*Üldised*/
 
-#wrap { 
-  width: 800px; 
+#wrap {
+  width: 800px;
   margin: 0 auto;
   font-family: Sans-Serif;
-	font-size:14px;
-	position: relative
+font-size:14px;
+position: relative
 }
 
 .logged_in
@@ -47,9 +47,9 @@ border: 1px solid;
 
 .login
 {
-	position:absolute;
-	top:35px;
-	margin: 10px;
+position:absolute;
+top:35px;
+margin: 10px;
 }
 
 #logged_in_cell
@@ -67,45 +67,62 @@ font-weight: bold;
 /*statistika.html*/
 #chart_pie
 {
-	position:relative;
-	bottom: 0px;
-	left: 380px;
+position:relative;
+bottom: 0px;
+left: 380px;
 }
 
 #statistika_erakonnad
 {
-	position:absolute;
-	top:94.5%;
-	left:50%;
+position:absolute;
+top:94.5%;
+left:50%;
 }
 
 .statistika
 {
-	visibility:hidden;
+visibility:hidden;
 }
 
  #statistika_tekst
  {
- 	position:absolute;
-	top: 300px;
-	left: 190px;
-	bottom:-20px;
+  position:absolute;
+top: 300px;
+left: 190px;
+bottom:-20px;
  }
 
 #cl_square
 {
-	position:absolute;
-	top: 325px;
-	left:280px;
-	bottom:-20px;
+position:absolute;
+top: 325px;
+left:280px;
+bottom:-20px;
 }
 
 .fail
 {
-	background-color: #FF3333;
+background-color: #FF3333;
 }
 
 .err_fail
 {
-	color:red;
+color:red;
+}
+
+
+.vasakule
+{
+	float: left;
+	margin-right:10px;
+}
+
+.nimekiri
+{
+	height:22px;
+}
+
+#otsi
+{
+	height:42px;
 }

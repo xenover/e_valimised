@@ -5,45 +5,54 @@
 	<title>E-valimised: hääleta</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	<script src="scripts/jquery-1.9.1.js"></script>
+	<script src="scripts/search.js"></script>
 </head>
 <body>
-	Regioon: <b>Tartumaa</b>
-	<br>
-	<div id="mittePrintida">
-	<table>
-	<tr>
-	<td>
-	Eesnimi:<br> <input type="text" name="perenimi">
-	</td>
-	<td>
-	Perenimi:<br> <input type="text" name="eesnimi">
-	</td>
-	<td>
-	Kandidaadi number:<br> <input type="text" name="kandidaadiNr">
-	</td>
-	<td>
-	Erakond:<div id="erakond"><form action = "">
-		<select name = "Erakond">
-		<option value="">Vali erakond</option>
-		<option value="reformierakond">Reformierakond</option>
-		<option value="irl">IRL</option>
-		<option value="rahvaliit">Rahvaliit</option>
-		</select>
-	</form>
+	<div class="mittePrintida">
+		<div class="vasakule">
+			<lable for="nimi">Nimi:</label><br>
+			<input type="text" id ="nimi" name="nimi" size="10">
+		</div>
+		<div class="vasakule">
+		  <label for="kandi_nr">Kandidaadi #:</label><br>
+		  <input type="text" id="kandi_nr" name="kandi_nr" size="10">
+		</div>
+		<div class="vasakule">
+		  <label for="erakond">Erakond:</label></br>
+		  <select name="erakond" id="erakond" class="nimekiri">
+			  <option value="">Vali erakond</option>
+		    <option value="reformierakond">Reformierakond</option>
+		    <option value="irl">IRL</option>
+		    <option value="rahvaliit">Rahvaliit</option>
+		  </select>
+		</div>
+		<div class="vasakule">
+			<label for="regioon">Regioon:</label></br>
+			<select name="regioon" id="regioon" class="nimekiri">
+				<option value="">Kogu Eesti</option>
+				<option value="harju">Harju maakond</option>
+				<option value="hiiu">Hiiu maakond</option>
+				<option value="ida_viru">Ida-Viru maakond</option>
+				<option value="jogeva">Jõgeva maakond</option>
+				<option value="jarva">Järva maakond</option>
+				<option value="laane">Lääne maakond</option>
+				<option value="laane_viru">Lääne-Viru maakond</option>
+				<option value="polva">Põlva maakond</option>
+				<option value="parnu">Pärnu maakond</option>
+				<option value="rapla">Rapla maakond</option>
+				<option value="saare">Saare maakond</option>
+				<option value="tartu">Tartu maakond</option>
+				<option value="valga">Valga maakond</option>
+				<option value="viljandi">Viljandi maakond</option>
+				<option value="voru">Võru maakond</option>
+			</select>
+		</div>
+		<div>
+			<button id="otsi" onclick="search()">OTSI</button>
+	  </div>
 	</div>
-	</td>
-	</tr>
-	</table>
-	<input type="submit" value="OTSI">
+	<div id="results">
 	</div>
-	<table>
-		<tr>
-		<th>Kandidaadi #</th>
-		<th>Eesnimi</th>
-		<th>Perenimi</th>
-		<th>Erakond</th>
-		<th>Vali</th>
-		</tr>
-	</table>
 </body>
 </html>
