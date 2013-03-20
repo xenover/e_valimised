@@ -1,11 +1,21 @@
-/*Üldised*/
+/*Ć�ldised*/
 
 #wrap { 
-  width: 800px; 
+  width: 800px;
+  heigth: 2000px;
   margin: 0 auto;
   font-family: Sans-Serif;
 font-size:14px;
    position: relative
+}
+
+#tekst
+{	visibility: hidden;
+	position: absolute; 
+	font-weight: bold;
+	color:"black";
+	font-family: Verdana;
+	left: 450px;
 }
 
 .logged_in
@@ -133,3 +143,6 @@ font-weight: bold;
 {
 	height:42px;
 }
+
+
+
