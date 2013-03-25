@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>seltsimehed.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/seltsimehed/greet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+
+  <!--OTSING-->
+  <servlet>
+        <servlet-name>Search</servlet-name>
+        <servlet-class>evalimised.Search</servlet-class>
+        <init-param>
+          <param-name/>
+          <param-value/>
+        </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+
+  <!--ERAKONDADE STATISTIKA-->
+    <servlet>
+        <servlet-name>Party_statistics</servlet-name>
+        <servlet-class>evalimised.Party_statistics</servlet-class>
+        <init-param>
+          <param-name/>
+          <param-value/>
+        </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Party_statistics</servlet-name>
+    <url-pattern>/party_statistics</url-pattern>
+  </servlet-mapping>
+
+</web-app>

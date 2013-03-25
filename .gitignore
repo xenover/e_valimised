@@ -1,6 +1,4 @@
 .classpath/*
 .project/*
-src/*
 gwt-unitCache/*
 .settings/*
-war/WEB-INF/*
