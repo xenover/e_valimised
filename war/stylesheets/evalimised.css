@@ -2,11 +2,14 @@
 
 #wrap { 
   width: 800px;
-  heigth: 2000px;
   margin: 0 auto;
   font-family: Sans-Serif;
-font-size:14px;
-   position: relative
+  font-size:14px;
+  position: relative
+}
+
+#keha{
+	min-height: 500px
 }
 
 #tekst
@@ -24,7 +27,7 @@ cursor: pointer;
 position:absolute;
 float:right;
 bottom:-20px;
-}*/
+}
 
 .logo
 {
@@ -72,6 +75,27 @@ text-align:right
 cursor: pointer;
 display: inline-block;
 font-weight: bold;
+}
+
+#hoiatustekst
+{
+	font-size:12px;
+	font-weight: bold;
+	color:red;
+}
+
+#hoiatustekstAvalehel
+{
+	text-align:justify;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+#kontaktid
+{
+	font-size:12px;
+	font-weight: bold;
 }
 
 /*statistika.html*/
