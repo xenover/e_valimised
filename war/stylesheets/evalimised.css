@@ -1,11 +1,24 @@
-/*Üldised*/
+/*Ć�ldised*/
 
 #wrap { 
-  width: 800px; 
+  width: 800px;
   margin: 0 auto;
   font-family: Sans-Serif;
-font-size:14px;
-   position: relative
+  font-size:14px;
+  position: relative
+}
+
+#keha{
+	min-height: 500px
+}
+
+#tekst
+{	visibility: hidden;
+	position: absolute; 
+	font-weight: bold;
+	color:"black";
+	font-family: Verdana;
+	left: 450px;
 }
 
 .logged_in
@@ -14,7 +27,7 @@ cursor: pointer;
 position:absolute;
 float:right;
 bottom:-20px;
-}*/
+}
 
 .logo
 {
@@ -62,6 +75,27 @@ text-align:right
 cursor: pointer;
 display: inline-block;
 font-weight: bold;
+}
+
+#hoiatustekst
+{
+	font-size:12px;
+	font-weight: bold;
+	color:red;
+}
+
+#hoiatustekstAvalehel
+{
+	text-align:justify;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+#kontaktid
+{
+	font-size:12px;
+	font-weight: bold;
 }
 
 /*statistika.html*/
@@ -133,3 +167,6 @@ font-weight: bold;
 {
 	height:42px;
 }
+
+
+
