@@ -4,21 +4,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <title>E-valimised: hääleta</title>
- <link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
- <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
- <!-- -------- -->
- <link rel="stylesheet" type="text/css" href="stylesheets/stat_stiil.css" media="screen">
- <script type="text/javascript" src="scripts/stat_javascript.js"></script>
- <!-- ------- -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>E-valimised: hääleta</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	<!-- -------- -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/stat_stiil.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.2.custom.css" media="screen">
+	<script type="text/javascript" src="scripts/stat_javascript.js"></script>
+	<script src="scripts/jquery-ui-1.10.2.custom.js"></script>
+	<script src="scripts/autocomplete.js"></script>
+	<!-- ------- -->
 </head>
 <body>
  <div id="keha">
+<div id="mittePrintida">
 <table>
 <tr>
-<td>Regioon: </td>
-<td><div id="regioon"><form action = "">
+<td>
+Eesnimi:<br> <input type="text" name="perenimi">
+</td>
+<td>
+Perenimi:<br> <input type="text" name="eesnimi">
+</td>
+<td>
+Kandidaadi number:<br> <input type="text" name="kandidaadiNr">
+</td>
+<td>
+Erakond:<div id="erakond"><form action = "">
+    <select name = "Erakond">
+ <option value="">Kõik erakonnad</option>
+    <option value="reformierakond">Reformierakond</option>
+    <option value="irl">IRL</option>
+    <option value="rahvaliit">Rahvaliit</option>
+    </select>
+ </form></div>
+</td>
+<td>Regioon:</br>
+<div id="regioon"><form action = "">
     <select name = "Regioon">
  <option value="riik">Kogu riik</option>
     <option value="harju">Harjumaa</option>
@@ -40,30 +63,6 @@
  <option value="voru">Võrumaa</option>
     </select>
  </form></div></td>
-</tr>
-</table>
-<div id="mittePrintida">
-<table>
-<tr>
-<td>
-Eesnimi:<br> <input type="text" name="perenimi">
-</td>
-<td>
-Perenimi:<br> <input type="text" name="eesnimi">
-</td>
-<td>
-Kandidaadi number:<br> <input type="text" name="kandidaadiNr">
-</td>
-<td>
-Erakond:<div id="erakond"><form action = "">
-    <select name = "Erakond">
- <option value="">Vali erakond</option>
-    <option value="reformierakond">Reformierakond</option>
-    <option value="irl">IRL</option>
-    <option value="rahvaliit">Rahvaliit</option>
-    </select>
- </form></div>
-</td>
 </tr>
 </table>
 <input type="submit" value="OTSI">
