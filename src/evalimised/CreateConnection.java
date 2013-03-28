@@ -5,11 +5,14 @@ import com.google.appengine.api.rdbms.AppEngineDriver;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CreateConnection {
+public class CreateConnection extends HttpServlet {
 	
+	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	  throws IOException {
 	   
@@ -17,7 +20,7 @@ public class CreateConnection {
 	  Connection c = null;
 	    try {
 	      DriverManager.registerDriver(new AppEngineDriver());
-	      c = DriverManager.getConnection("jdbc:google:rdbms://riigipoore/riigipoore");
+	      c = DriverManager.getConnection("jdbc:google:rdbms://riigipoore:riigipoore/mysql", "root", "");
 	      String fname = req.getParameter("fname");
 	      String content = req.getParameter("content");
 	      if (fname == "" || content == "") {
