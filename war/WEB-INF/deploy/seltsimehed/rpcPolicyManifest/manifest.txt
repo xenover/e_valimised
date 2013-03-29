@@ -1,2 +1,3 @@
 # Module seltsimehed
 # RPC service class, partial path of RPC policy file
+seltsimehed.client.GreetingService, EE8FD358AA4B943F879CF0A340F06838.gwt.rpc

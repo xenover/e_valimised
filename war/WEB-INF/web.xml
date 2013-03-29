@@ -30,18 +30,18 @@
     <url-pattern>/_ah/spi/*</url-pattern>
   </servlet-mapping>
 
-  <!--OTSING-->
+  <!--KANDIDAATIDE OTSING-->
   <servlet>
-        <servlet-name>Search</servlet-name>
-        <servlet-class>evalimised.Search</servlet-class>
+        <servlet-name>PopulateTable</servlet-name>
+        <servlet-class>evalimised.PopulateTable</servlet-class>
         <init-param>
           <param-name/>
           <param-value/>
         </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Search</servlet-name>
-    <url-pattern>/search</url-pattern>
+    <servlet-name>PopulateTable</servlet-name>
+    <url-pattern>/PopulateTable</url-pattern>
   </servlet-mapping>
 
   <!--ERAKONDADE STATISTIKA-->
