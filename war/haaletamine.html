@@ -14,16 +14,17 @@
   <script type="text/javascript" src="scripts/stat_javascript.js"></script>
   <script src="scripts/jquery-ui-1.10.2.custom.js"></script>
   <script src="scripts/autocomplete.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="scripts/haaletamine.js"></script>
   <!-- ------- -->
 </head>
 <body>
 <div id="keha">
 <div id="mittePrintida">
-<form action="search">
 <table>
 <tr>
 <td>
-Eesnimi:<br> <input type="text" id="eesnimi" name="eesnimi">
+Eesnimisadf:<br> <input type="text" id="eesnimi" name="eesnimi">
 </td>
 <td>
 Perenimi:<br> <input type="text" id="perenimi" name="perenimi">
@@ -66,67 +67,22 @@ Erakond:<div id="erakond">
 </td>
 </tr>
 </table>
-<input type="submit" value="OTSI">
+<input type="submit" value="OTSI" id="showTable">
 </div> 
  </td>
  </tr>
  </table>
-</form>
 <!-- ----------------- -->
 <div id="wrapper">
- <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
-  <tr>
-<!-class="nosort">
-   <th>ID</th>
-   <th>Eesnimi</th>
-   <th>Perenimi</th>
-   <th>Erakond</th>
-   <th>VALI</th>
-   
-  </tr>
-  <tr>
-   <td>76</td>
-   <td>Maali</td>
-   <td>Mardikas</td>
-   <td>Keskerakond</td>
-   <td>VALI!</td>
-  </tr>
-  <tr>
-   <td>77</td>
-   <td>Andres</td>
-   <td>Auto</td>
-   <td>Reformierakond</td>
-   <td>VALI!</td>
-  </tr>
-  <tr>
-   <td>78</td>
-   <td>Juku</td>
-   <td>Maarohi</td>
-   <td>IRL</td>
-   <td>VALI!</td>
-  </tr>
-  <tr>
-   <td>79</td>
-   <td>Aivar</td>
-   <td>Ubasalu</td>
-   <td>Keskerakond</td>
-   <td>VALI!</td>
-  </tr>
-  <tr>
-   <td>80</td>
-   <td>Jaak</td>
-   <td>Põllumaa</td>
-   <td>IRL</td>
-   <td>VALI!</td>
-  </tr>
-  <tr>
-   <td>81</td>
-   <td>Ivan</td>
-   <td>Päevalill</td>
-   <td>Reformierakond</td>
-   <td>VALI!</td>
-  </tr>
- </table>
+<div id="tablediv">
+<table cellspacing="0" id="countrytable"> 
+    <tr> 
+        <th scope="col">ID</th> 
+        <th scope="col">Eesnimi</th> 
+        <th scope="col">Perenimi</th> 
+        <th scope="col">Erakond</th>      
+    </tr> 
+</table>
 </div>
 <script type="text/javascript">
 var sorter=new table.sorter("sorter");
