@@ -1,6 +1,7 @@
 package evalimised;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,9 +23,10 @@ public class PopulateTable extends HttpServlet {
     }
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				
+		PrintWriter test = response.getWriter();
 		ArrayList<Candidates> candidate=new ArrayList<Candidates>();
-		candidate=SearchCandidates.getCandidates();
+		String fname = request.getParameter("fname");
+		candidate=SearchCandidates.getCandidates(fname);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(candidate, new TypeToken<List<Candidates>>() {}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();

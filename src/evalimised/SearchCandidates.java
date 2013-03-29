@@ -32,12 +32,12 @@ public class SearchCandidates {
 
     }
     
-    public static ArrayList<Candidates> getCandidates() {
+    public static ArrayList<Candidates> getCandidates(String fname) {
     	connection = SearchCandidates.getConnection();
         ArrayList<Candidates> candidateList = new ArrayList<Candidates>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from candidateInfo");
+            ResultSet rs = statement.executeQuery("select * from candidateInfo WHERE first_name LIKE \"" + fname + "%\"");
         
             while(rs.next()) {	
             	Candidates candidate=new Candidates();
