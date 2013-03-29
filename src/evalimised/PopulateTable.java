@@ -26,7 +26,11 @@ public class PopulateTable extends HttpServlet {
 		PrintWriter test = response.getWriter();
 		ArrayList<Candidates> candidate=new ArrayList<Candidates>();
 		String fname = request.getParameter("fname");
-		candidate=SearchCandidates.getCandidates(fname);
+		String lname = request.getParameter("lname");
+		String id    = request.getParameter("id");
+		String party = request.getParameter("party");
+		String region= request.getParameter("region");
+		candidate=SearchCandidates.getCandidates(fname, lname, id, party, region);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(candidate, new TypeToken<List<Candidates>>() {}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();

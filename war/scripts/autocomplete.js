@@ -10,8 +10,8 @@ $(document).ready(function() {
 	var perenimed = [
    "Ubasalu",
    "Auto",
-   "PÃ¤evalill",
-   "PÃµllumaa",
+   "Päevalill",
+   "Põllumaa",
    "Maarohi",
    "Mardikas"
 	]

@@ -32,12 +32,41 @@ public class SearchCandidates {
 
     }
     
-    public static ArrayList<Candidates> getCandidates(String fname) {
+    public static ArrayList<Candidates> getCandidates(String fname, String lname, String id, String party, String region) {
     	connection = SearchCandidates.getConnection();
         ArrayList<Candidates> candidateList = new ArrayList<Candidates>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from candidateInfo WHERE first_name LIKE \"" + fname + "%\"");
+            boolean has_where = false;
+            String select = "select * from candidateInfo ";
+            if (fname != null && !fname.trim().isEmpty()) {
+            	select += has_where? "WHERE " : "";
+            	has_where = true
+            	select +=  " first_name LIKE \"%" + fname + "%\" AND "; 
+            }
+            if (lname != null && !lname.trim().isEmpty()) {
+            	select += has_where? "WHERE " : "";
+            	has_where = true
+            	select +=  " last_name LIKE \"%" + lname + "%\" AND "; 
+            }
+            if (id != null && !id.trim().isEmpty()) {
+            	select += has_where? "WHERE " : "";
+            	has_where = true
+            	select +=  " id = " + id + " AND "; 
+            }
+            if (party != null && !party.trim().isEmpty()) {
+            	select += has_where? "WHERE " : "";
+            	has_where = true
+            	select +=  " party LIKE \"%" + party + "%\" AND "; 
+            }
+            if (region != null && !region.trim().isEmpty()) {
+            	select += has_where? "WHERE " : "";
+            	has_where = true
+            	select +=  " region LIKE \"%" + region + "%\" AND "; 
+            }
+            select = select.substring(0, select.length()-5); // " AND " eemaldamiseks
+            
+            ResultSet rs = statement.executeQuery(select);
         
             while(rs.next()) {	
             	Candidates candidate=new Candidates();
