@@ -26,12 +26,15 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr">
 </td>
 <td>
 Erakond:<div id="erakond"><form action = "search">
-    <select name = "Erakond">
-	<option value="">Vali erakond</option>
-    <option value="reformierakond">Reformierakond</option>
-    <option value="irl">IRL</option>
-    <option value="rahvaliit">Rahvaliit</option>
-    </select>
+  <label for="erakond">Erakond:</label></br>
+  <select name = "Erakond" id="erakond">
+	  <option value="">Kõik erakonnad</option>
+    <option value="maalased">Maalaste Erakond</option>
+		<option value="sinised">Eestimaa Sinised</option>
+		<option value="toomehed">Töömeeste Erakond</option>
+		<option value="pep">Parema Eesti Partei</option>
+		<option value="russkie">Eesti Venelaspartei</option>
+  </select>
 	</form></div>
 </form>
 </td>
