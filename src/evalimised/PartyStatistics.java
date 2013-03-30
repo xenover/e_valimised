@@ -25,8 +25,8 @@ public class PartyStatistics extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter test = response.getWriter();
 		ArrayList<Party> party=new ArrayList<Party>();
-//		String fname = request.getParameter("fname");
-		party=SearchByParty.getParties("AA");
+		String region = request.getParameter("region");
+		party=SearchByParty.getParties(region);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(party, new TypeToken<List<Candidates>>() {}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();

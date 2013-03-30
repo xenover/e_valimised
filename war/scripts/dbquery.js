@@ -30,8 +30,11 @@ $(document).ready(function() {
   });
   
   $("#searchParties").click(function(event){
-		var url = "/PartyStatistics";
-		alert(url);
+		var params = "?";
+		var region = $("#partyRegion");
+		params += "region=" + region.val(); 
+		var url = "/PartyStatistics" + params;
+		alert(region.val());
 	    $.get(url ,function(responseJson) {
 	      if(responseJson!=null){
 	        $("#partytable").find("tr:gt(0)").remove();

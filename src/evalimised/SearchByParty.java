@@ -24,7 +24,13 @@ public class SearchByParty {
         ArrayList<Party> partyList = new ArrayList<Party>();
         try {
             Statement statement = connection.createStatement();
-            String select = "select * from partyVotesRegion";
+            String select;
+            if(region.equals("")){
+            select = "select * from partyVotesState";
+            }
+            else{
+            	select = "select * from partyVotesRegion WHERE region LIKE \"" + region + "%\"";
+            }
             ResultSet rs = statement.executeQuery(select);
             while(rs.next()) {	
             	Party party=new Party();
