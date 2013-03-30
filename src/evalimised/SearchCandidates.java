@@ -18,56 +18,16 @@ import com.google.appengine.api.rdbms.AppEngineDriver;
 public class SearchCandidates {
 
     private static Connection connection = null;
-
-    public static Connection getConnection() {
-
-		Connection c = null;
-		try {
-			DriverManager.registerDriver(new AppEngineDriver());
-		    c = DriverManager.getConnection("jdbc:google:rdbms://riigipoore:riigipoore/evalimised", "root", "");
-		 } catch (SQLException e) {
-		        e.printStackTrace();
-		 }
-		return c;
-
-    }
     
     public static ArrayList<Candidates> getCandidates(String fname, String lname, String id, String party, String region) {
-    	connection = SearchCandidates.getConnection();
+    	connection = CreateConnection.getConnection();
+    	int candidate_id = Integer.parseInt(id);
         ArrayList<Candidates> candidateList = new ArrayList<Candidates>();
         try {
             Statement statement = connection.createStatement();
             boolean has_where = false;
-            String select = "select * from candidateInfo ";
-            if (fname != null && !fname.trim().isEmpty()) {
-            	select += has_where? "WHERE " : "";
-            	has_where = true
-            	select +=  " first_name LIKE \"%" + fname + "%\" AND "; 
-            }
-            if (lname != null && !lname.trim().isEmpty()) {
-            	select += has_where? "WHERE " : "";
-            	has_where = true
-            	select +=  " last_name LIKE \"%" + lname + "%\" AND "; 
-            }
-            if (id != null && !id.trim().isEmpty()) {
-            	select += has_where? "WHERE " : "";
-            	has_where = true
-            	select +=  " id = " + id + " AND "; 
-            }
-            if (party != null && !party.trim().isEmpty()) {
-            	select += has_where? "WHERE " : "";
-            	has_where = true
-            	select +=  " party LIKE \"%" + party + "%\" AND "; 
-            }
-            if (region != null && !region.trim().isEmpty()) {
-            	select += has_where? "WHERE " : "";
-            	has_where = true
-            	select +=  " region LIKE \"%" + region + "%\" AND "; 
-            }
-            select = select.substring(0, select.length()-5); // " AND " eemaldamiseks
-            
+            String select = "select * from candidateInfo WHERE first_name LIKE \"" + fname + "%\" AND last_name LIKE \"" + lname + "%\" AND region LIKE \"" + region + "%\" AND party_name LIKE \"" + party + "%\"";
             ResultSet rs = statement.executeQuery(select);
-        
             while(rs.next()) {	
             	Candidates candidate=new Candidates();
             	candidate.setId(rs.getInt("candidate_id"));

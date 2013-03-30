@@ -5,15 +5,15 @@
 	<title>E-valimised: avaleht</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+	<script type="text/javascript" src="scripts/dbquery.js"></script>
 </head>
 <body>
 <div id="wrap">
-	
+	1410
 	<table border="0" width="700">
 <div id="mittePrintida">
 <table>
 <tr>
-<form action="party_statistics">
 <td>Regioon:</br><div id="regioon"><form action = "">
     <select name="Regioon">
 	<option value="riik">Kogu riik</option>
@@ -38,12 +38,17 @@
 	</form></div></td>
 </tr>
 </table>
-<input type="submit" value="OTSI">
-</form>
+<input id="searchParties" type="submit" value="OTSI">
 </div>
 	</td>
 	</tr>
 	</table>
+<table cellspacing="0" id="partytable"> 
+    <tr> 
+        <th scope="col">Erakond</th> 
+        <th scope="col">Hääli</th>      
+    </tr> 
+</table>
 
 </div>
 </body>

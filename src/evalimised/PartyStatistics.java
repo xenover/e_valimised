@@ -15,28 +15,23 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-public class PopulateTable extends HttpServlet {
+public class PartyStatistics extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public PopulateTable() {
+    public PartyStatistics() {
         
     }
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter test = response.getWriter();
-		ArrayList<Candidates> candidate=new ArrayList<Candidates>();
-		String fname = request.getParameter("fname");
-		String lname = request.getParameter("lname");
-		String id    =  request.getParameter("id");
-		String party = request.getParameter("party");
-		String region= request.getParameter("region");
-		candidate=SearchCandidates.getCandidates(fname, lname, id, party, region);
+		ArrayList<Party> party=new ArrayList<Party>();
+//		String fname = request.getParameter("fname");
+		party=SearchByParty.getParties("AA");
 		Gson gson = new Gson();
-		JsonElement element = gson.toJsonTree(candidate, new TypeToken<List<Candidates>>() {}.getType());
+		JsonElement element = gson.toJsonTree(party, new TypeToken<List<Candidates>>() {}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
-		
 	}
 
 	

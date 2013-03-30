@@ -46,16 +46,16 @@
 
   <!--ERAKONDADE STATISTIKA-->
     <servlet>
-        <servlet-name>Party_statistics</servlet-name>
-        <servlet-class>evalimised.Party_statistics</servlet-class>
+        <servlet-name>PartyStatistics</servlet-name>
+        <servlet-class>evalimised.PartyStatistics</servlet-class>
         <init-param>
           <param-name/>
           <param-value/>
         </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Party_statistics</servlet-name>
-    <url-pattern>/party_statistics</url-pattern>
+    <servlet-name>PartyStatistics</servlet-name>
+    <url-pattern>/PartyStatistics</url-pattern>
   </servlet-mapping>
 
 </web-app>
