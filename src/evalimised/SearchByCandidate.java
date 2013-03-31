@@ -21,9 +21,14 @@ public class SearchByCandidate {
     public static ArrayList<Candidates> getCandidates(String fname, String lname, String id, String party, String region) {
     	connection = CreateConnection.getConnection();
         ArrayList<Candidates> candidateList = new ArrayList<Candidates>();
+        String idquery = "";
+    	if(id.length() > 0){
+    		int candidate_id = Integer.parseInt(id);
+    		idquery = "AND candidate_id LIKE '" + candidate_id + "'";
+    	}
         try {
             Statement statement = connection.createStatement();
-            String select = "select * from candidateVotes";
+            String select = "select * from candidateVotes WHERE first_name LIKE \"" + fname + "%\" AND last_name LIKE \"" + lname + "%\" AND region LIKE \"" + region + "%\" AND party_name LIKE \"" + party + "%\"" + idquery;
             ResultSet rs = statement.executeQuery(select);
             while(rs.next()) {	
             	Candidates candidate=new Candidates();

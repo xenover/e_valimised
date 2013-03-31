@@ -35,7 +35,6 @@ public class PopulateTable extends HttpServlet {
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
-		
 	}
 
 	
