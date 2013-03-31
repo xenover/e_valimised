@@ -61,18 +61,18 @@ $(document).ready(function() {
 		params += "party=" + party.val() + "&";
 	  	params += "region=" + region.val(); 
 		var url = "/CandidateStatistics" + params;
-		alert(url);
 	    $.get(url ,function(responseJson) {
 	      if(responseJson!=null){
-	        $("#candidates").find("tr:gt(0)").remove();
+	        $("#candidateTable").find("tr:gt(0)").remove();
 	        var table1 = $("#candidateTable");
 		    $.each(responseJson, function(key,value) { 
-		      var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+		      var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
 		      rowNew.children().eq(0).text(value['id']); 
 		      rowNew.children().eq(1).text(value['first_name']); 
 		      rowNew.children().eq(2).text(value['last_name']); 
 		      rowNew.children().eq(3).text(value['party']);
-		      rowNew.children().eq(3).text(value['votes']);
+		      rowNew.children().eq(4).text(value['region']);
+		      rowNew.children().eq(5).text(value['votes']);
 		      rowNew.appendTo(table1);
 		    });
 	      }
