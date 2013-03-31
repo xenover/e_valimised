@@ -15,17 +15,15 @@ import java.util.Properties;
 import com.google.appengine.api.rdbms.AppEngineDriver;
 
 
-public class SearchCandidates {
-
+public class SearchByCandidate {
     private static Connection connection = null;
     
     public static ArrayList<Candidates> getCandidates(String fname, String lname, String id, String party, String region) {
     	connection = CreateConnection.getConnection();
-    	int candidate_id = Integer.parseInt(id);
         ArrayList<Candidates> candidateList = new ArrayList<Candidates>();
         try {
             Statement statement = connection.createStatement();
-            String select = "select * from candidateInfo WHERE first_name LIKE \"" + fname + "%\" AND last_name LIKE \"" + lname + "%\" AND region LIKE \"" + region + "%\" AND party_name LIKE \"" + party + "%\"";
+            String select = "select * from candidateVotes";
             ResultSet rs = statement.executeQuery(select);
             while(rs.next()) {	
             	Candidates candidate=new Candidates();
@@ -34,6 +32,7 @@ public class SearchCandidates {
             	candidate.setLast_name(rs.getString("last_name"));
             	candidate.setParty(rs.getString("party_name"));
             	candidate.setRegion(rs.getString("region"));
+            	candidate.setVotes(rs.getInt("votes"));
             	candidateList.add(candidate);
             }
         } catch (SQLException e) {

@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="scripts/stat_javascript.js"></script>
 	<script src="scripts/jquery-ui-1.10.2.custom.js"></script>
 	<script src="scripts/autocomplete.js"></script>
+	<script type="text/javascript" src="scripts/dbquery.js"></script>
 	<!-- ------- -->
 </head>
 <body>
@@ -22,62 +23,65 @@
 <table>
 <tr>
 <td>
-Eesnimi:<br> <input type="text" name="perenimi">
+Eesnimi:<br> <input type="text" name="eesnimi" id="eesnimi">
 </td>
 <td>
-Perenimi:<br> <input type="text" name="eesnimi">
+Perenimi:<br> <input type="text" name="perenimi" id="perenimi">
 </td>
 <td>
-Kandidaadi number:<br> <input type="text" name="kandidaadiNr">
+Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
 </td>
 <td>
   <label for="erakond">Erakond:</label></br>
   <select name = "Erakond" id="erakond">
 	  <option value="">Kõik erakonnad</option>
-    <option value="maalased">Maalaste Erakond</option>
-		<option value="sinised">Eestimaa Sinised</option>
-		<option value="toomehed">Töömeeste Erakond</option>
-		<option value="pep">Parema Eesti Partei</option>
-		<option value="russkie">Eesti Venelaspartei</option>
+    <option value="Maalaste Erakond">Maalaste Erakond</option>
+		<option value="Eestimaa Sinised">Eestimaa Sinised</option>
+		<option value="Töömeeste Erakond">Töömeeste Erakond</option>
+		<option value="Parema Eesti Partei">Parema Eesti Partei</option>
+		<option value="Eesti Venelaspartei">Eesti Venelaspartei</option>
   </select>
 </td>
 <td>Regioon:</br>
-<div id="regioon"><form action = "">
-    <select name = "Regioon">
- <option value="riik">Kogu riik</option>
-    <option value="harju">Harjumaa</option>
-    <option value="hiiu">Hiiumaa</option>
-    <option value="idaviru">Ida-Virumaa</option>
- <option value="jogeva">Jõgevamaa</option>
-    <option value="jarva">Järvamaa</option>
-    <option value="laane">Läänemaa</option>
-    <option value="laaneviru">Lääne-Virumaa</option>
- <option value="polva">Põlvamaa</option>
-    <option value="parnu">Pärnumaa</option>
-    <option value="rapla">Raplamaa</option>
-    <option value="saare">Saaremaa</option>
- <option value="tallinn">Tallinn</option>
- <option value="tartu">Tartu</option>
- <option value="tartumaa">Tartumaa</option>
- <option value="valga">Valgamaa</option>
- <option value="viljandi">Viljandimaa</option>
- <option value="voru">Võrumaa</option>
+<div><form action = "">
+    <select name="candidateRegion" id="candidateRegion">
+		<option value="">Kogu Eesti</option>
+		<option value="Harjumaa">Harju maakond</option>
+		<option value="Hiiumaa">Hiiu maakond</option>
+		<option value="Ida-Virumaa">Ida-Viru maakond</option>
+		<option value="Jõgevamaa">Jõgeva maakond</option>
+		<option value="Järvamaa">Järva maakond</option>
+		<option value="Läänemaa">Lääne maakond</option>
+		<option value="Lääne-Virumaa">Lääne-Viru maakond</option>
+		<option value="Põlvamaa">Põlva maakond</option>
+		<option value="Pärnumaa">Pärnu maakond</option>
+		<option value="Raplamaa">Rapla maakond</option>
+		<option value="Saaremaa">Saare maakond</option>
+		<option value="Tartumaa">Tartu maakond</option>
+		<option value="Valgamaa">Valga maakond</option>
+		<option value="Viljandimaa">Viljandi maakond</option>
+		<option value="Võrumaa">Võru maakond</option>
     </select>
- </form></div></td>
+	</form></div></div></td>
 </tr>
 </table>
-<input type="submit" value="OTSI">
+<input id="searchCandidates" type="submit" value="OTSI">
 </div>
 </div> 
  </td>
  </tr>
  </table>
 <div id="wrapper">
- <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
+ <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="candidateTable">
+        <th scope="col">ID</th> 
+        <th scope="col">Eesnimi</th> 
+        <th scope="col">Perenimi</th> 
+        <th scope="col">Erakond</th>  
+        <th scope="col">Hääli</th>  
  </table>
 </div>
 <script type="text/javascript">
-var sorter=new table.sorter("sorter");
+var sorter=new table.sorter("candidateTable");
 sorter.init("sorter",1);
 </script>
 </body>

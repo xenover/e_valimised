@@ -6,6 +6,7 @@ public class Candidates {
 	private String last_name;
 	private String party;
 	private String region;
+	private int votes;
 	
 	public Candidates() {
 	}
@@ -49,7 +50,12 @@ public class Candidates {
 	public void setRegion(String region) {
 		this.region = region;
 	}
-	
-	
 
+	public int getVotes() {
+		return votes;
+	}
+
+	public void setVotes(int votes) {
+		this.votes = votes;
+	}
 }

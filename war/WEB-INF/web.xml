@@ -57,5 +57,19 @@
     <servlet-name>PartyStatistics</servlet-name>
     <url-pattern>/PartyStatistics</url-pattern>
   </servlet-mapping>
+  
+    <!--ISIKUTE STATISTIKA-->
+    <servlet>
+        <servlet-name>CandidateStatistics</servlet-name>
+        <servlet-class>evalimised.CandidateStatistics</servlet-class>
+        <init-param>
+          <param-name/>
+          <param-value/>
+        </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CandidateStatistics</servlet-name>
+    <url-pattern>/CandidateStatistics</url-pattern>
+  </servlet-mapping>
 
 </web-app>

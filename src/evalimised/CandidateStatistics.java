@@ -15,10 +15,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-public class PopulateTable extends HttpServlet {
+public class CandidateStatistics extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public PopulateTable() {
+    public CandidateStatistics() {
         
     }
 	
@@ -29,13 +29,12 @@ public class PopulateTable extends HttpServlet {
 		String id    =  request.getParameter("id");
 		String party = request.getParameter("party");
 		String region= request.getParameter("region");
-		candidate=SearchCandidates.getCandidates(fname, lname, id, party, region);
+		candidate=SearchByCandidate.getCandidates(fname, lname, id, party, region);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(candidate, new TypeToken<List<Candidates>>() {}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
-		
 	}
 
 	
