@@ -1,33 +1,28 @@
-$(document).ready(function(){
-  //Lehe avamisel avab avalehe
-  $("#keha").load("avaleht.html");
-  //Menüü
-  $("#avaleht").click(function(){
-      $("#keha").empty();
-      $("#keha").load("avaleht.html");
-    });
-	$("#statistika").click(function(){
-  		$("#keha").empty();
-    	$("#keha").load("statistika.html");
+function sisu(nimi) {
+  $("#keha").empty();
+  $("#keha").load(nimi + ".html")
+  if(nimi == "statistika")
+  {
       setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
       setTimeout(function(){document.getElementById("loader").style.visibility="hidden";},1500);
       setTimeout(function(){document.getElementById("chart_pie").style.visibility="visible";},1500);
       setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
-  	});
-	$("#user").click(function(){
-		$("#keha").empty();
-  	$("#keha").load("seaded.html");
-	});
-  $("#haaletamine").click(function(){
-    $("#keha").empty();
-    $("#keha").load("haaletamine.html");
-  });
-  $("#kandideeri").click(function(){
-    $("#keha").empty();
-    $("#keha").load("kandideeri.html");
-  });
-  $("#statistika_isikud").click(function(){
-    $("#keha").empty();
-    $("#keha").load("isikute_statistika.html");
-  });
-});
+  }
+  else if( nimi == "haaletamine")
+  {
+    
+  }
+}
+
+function navig() {
+  a = location.hash;
+  a = a.replace("#", "");
+  if (a != "") {
+    sisu(a);
+  }
+  else {
+    sisu("avaleht");
+  }
+}
+window.onload = navig;
+window.onhashchange = navig; 
