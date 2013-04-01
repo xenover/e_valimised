@@ -6,10 +6,18 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
   <script type="text/javascript" src="scripts/heartcode-canavasloader.js"></script>
   <script type="text/javascript" src="scripts/statistikaskript.js"></script>
 </head>
 <body onload="loader()">
+<script>
+  setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
+  setTimeout(function(){document.getElementById("loader").style.visibility="hidden";},1500);
+  setTimeout(function(){document.getElementById("chart_pie").style.visibility="visible";},1500);
+  setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
+</script>
 <div id="wrap">
   <div  id="mittePrintida">
 

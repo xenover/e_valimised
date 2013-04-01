@@ -1,33 +1,41 @@
 $(document).ready(function(){
-  //Lehe avamisel avab avalehe
-  $("#keha").load("avaleht.html");
-  //Menüü
+  var last_page = $.cookie("current_tab");
+  //Lehe avamisel avab avalehe v�i cookiesse salvestatud lehe
+  $("#keha").load(last_page == undefined ? "avaleht.html" : last_page);
+  
   $("#avaleht").click(function(){
-      $("#keha").empty();
-      $("#keha").load("avaleht.html");
-    });
-	$("#statistika").click(function(){
-  		$("#keha").empty();
-    	$("#keha").load("statistika.html");
-      setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
-      setTimeout(function(){document.getElementById("loader").style.visibility="hidden";},1500);
-      setTimeout(function(){document.getElementById("chart_pie").style.visibility="visible";},1500);
-      setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
-  	});
-	$("#user").click(function(){
-		$("#keha").empty();
+    $("#keha").empty();
+    $("#keha").load("avaleht.html");
+    $.cookie("current_tab", "avaleht.html");
+  });
+  
+  $("#statistika").click(function(){
+    $("#keha").empty();
+    $("#keha").load("statistika.html");
+    $.cookie("current_tab", "statistika.html");
+  });
+  
+  $("#user").click(function(){
+    $("#keha").empty();
   	$("#keha").load("seaded.html");
-	});
+  	$.cookie("current_tab", "seaded.html")
+  });
+  
   $("#haaletamine").click(function(){
     $("#keha").empty();
     $("#keha").load("haaletamine.html");
+    $.cookie("current_tab", "haaletamine.html")
   });
+  
   $("#kandideeri").click(function(){
     $("#keha").empty();
     $("#keha").load("kandideeri.html");
+    $.cookie("current_tab", "kandideeri.html")
   });
+  
   $("#statistika_isikud").click(function(){
     $("#keha").empty();
     $("#keha").load("isikute_statistika.html");
+    $.cookie("current_tab", "isikute_statistika.html")
   });
 });
