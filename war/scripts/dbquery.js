@@ -12,21 +12,23 @@ $(document).ready(function() {
 	params += "party=" + party.val() + "&";
   	params += "region=" + region.val(); 
 	var url = "/PopulateTable" + params;
-	alert(url);
     $.get(url ,function(responseJson) {
       if(responseJson!=null){
-        $("#countrytable").find("tr:gt(0)").remove();
-        var table1 = $("#countrytable");
+    	$("#candidatetable").find("tr:gt(0)").remove();
+        var table1 = $("#candidatetable");
 	    $.each(responseJson, function(key,value) { 
 	      var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
 	      rowNew.children().eq(0).text(value['id']); 
 	      rowNew.children().eq(1).text(value['first_name']); 
 	      rowNew.children().eq(2).text(value['last_name']); 
 	      rowNew.children().eq(3).text(value['party']);
+	      rowNew.children().eq(4).text(value['region']);
+	      rowNew.children().eq(5).text("VALI!");
 	      rowNew.appendTo(table1);
 	    });
       }
-    });        
+    });
+    $("#candidatetable").tablesorter();
   });
   
   $("#searchParties").click(function(event){

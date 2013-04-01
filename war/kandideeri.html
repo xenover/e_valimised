@@ -6,33 +6,33 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 	<script src="scripts/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
 	<script src="scripts/validation.js"></script>
+	<script type="text/javascript" src="scripts/dbquery.js"></script>
 </head>
 <body>
-	<form id="kandideeri" METHOD="POST"  action="esitakandidatuur" >
-    <b>Eesnimi*:</b> <span id="eesnimi">Peeter</span></br></br>
-    <b>Perenimi*:</b> <span id="perenimi">Paan</span></br></br>
-    <b>Sünniaeg (pp.kk.aa)*:</b> <span id="synniaeg">01.01.1970</span></br></br>
-    <b>Isikukood*:</b> <span id="isikukood">39001014933</span></br></br>
-    <b>Elukoht*:</b> <span id="elukoht">Männipuu 2-6</span></br></br>
-    <b>E-mail*:</b> <input id ="email" name="email" type="text" onblur="checkEmail()"><span id="email_err"></span></br></br>
-    <b>Telefon*:</b> <input id="telefon" name="telefon" type="text" onblur="checkPhone()"><span id="telefon_err"></span></br></br>
-    <b>Perekonnaseis*:</b> <select name="p_seis" id="p_seis" onblur="checkFamStat()">
+	<table>
+	<tr><td><b>Eesnimi:</b></td><td><input id ="eesnimi" name="eesnimi" type="text" value="Peeter"readonly><br></td></tr>
+    <tr><td><b>Perenimi:</b></td><td><input id ="perenimi" name="perenimi" type="text" value="Paan" readonly></td></tr>
+    <tr><td><b>Sünniaeg (aaaa-kk-pp):</td><td></b><input id ="synniaeg" name="synniaeg" type="text" value="1970-01-01" readonly><br><td></tr>
+    <tr><td><b>Isikukood:</b></td><td><input id ="isikukood" name="isikukood" type="text" value="12345678" readonly></td></tr>
+    <tr><td><b>Elukoht:</b></td><td><input id ="elukoht" name="elukoht" type="text" value="Männipuu 2-6"readonly><br></td></tr>
+    <tr><td><b>Regioon:</b></td><td><input id ="regioon" name="regioon" type="text" value="Tartumaa"readonly><br></td></tr>
+    <tr><td><b>E-mail*:</b></td><td><input id ="email" name="email" type="text" onblur="checkEmail()"><span id="email_err"></span></td></tr>
+    <tr><td><b>Telefon*:</b></td><td><input id="telefon" name="telefon" type="text" onblur="checkPhone()"><span id="telefon_err"></span></td></tr>
+    <tr><td><b>Perekonnaseis*:</b></td><td><select name="p_seis" id="p_seis" onblur="checkFamStat()">
     <option value="tyhi">-Valik-</option>
     <option value="vall">Vallaline</option>
     <option value="abi">Abielus</option>
-    </select><span id="p_err"></span></br></br>
-    <b>Haridus*:</b> <select name="haridus" id="haridus" onblur="checkEduc()">
+    </select><span id="p_err"></span></td></tr>
+    <tr><td><b>Haridus*:</b></td><td> <select name="haridus" id="haridus" onblur="checkEduc()">
     <option value="tyhi">-Valik-</option>
     <option value="pohi">Põhiharidus</option>
     <option value="kesk">Keskharidus</option>
     <option value="korg">Kõrgharidus</option>
-    </select><span id="har_err"></span></br></br>
-    <b>Amet*:</b> <input name="amet" id="amet"type="text" onblur="checkJob()"><span id="amet_err"></span></br></br>
-    <b>Asutus*:</b> <input name="asutus" id="asutus" type="text" onblur="checkFacil()"><span id="asutus_err"></span></br></br>
-    <b>Maakond:</b> <span id="maakond">Tartumaa</span><span id="maakond_err"></span></br></br>
-    <b>Erakond*:</b><select name="erakond" id="erakond" onblur="checkParty()">
+    </select><span id="har_err"></span></td></tr>
+    <tr><td><b>Amet*:</b></td><td> <input name="amet" id="amet"type="text" onblur="checkJob()"><span id="amet_err"></span></td></tr>
+    <tr><td><b>Asutus*:</b></td><td> <input name="asutus" id="asutus" type="text" onblur="checkFacil()"><span id="asutus_err"></span></td></tr>
+    <tr><td><b>Erakond*:</b></td><td><select name="erakond" id="erakond" onblur="checkParty()">
 		<option value="tyhi">-Valik-</option>
 		<option value="ises_part">Iseseseisvuspartei</option>
 		<option value="keskera">Keskerakond</option>
@@ -44,19 +44,19 @@
 		<option value="est_roh">Eestimaa Rohelised</option>
 		<option value="isam_res">Isamaa ja Res Publica Liit</option>
 		<option value="sots_dem">Sotisaaldemokraadid</option>
-	  </select><span id="erakond_err"></span></br></br>
-	  <form action="">
-	  	<label for="pilt"><b>Pilt*:</b></label>
+	  </select><span id="erakond_err"></span></td><tr>	
+	  <tr><td><form action="">
+	  	<label for="pilt"><b>Pilt*:</b></label></td><td>
 	    <input type="file" name="kandi_pilt" id="kandi_pilt" accept="image/*" onchange="checkFile('#kandi_pilt', '#pilt_err')">
 	    <span id="pilt_err"></span>
-	  </form></br>
-	  <form action="">
-	  	<label for="cv"><b>CV*:</b></label>
+	  </form></td></tr>
+	  <tr><td><form action="">
+	  	<label for="cv"><b>CV*:</b></label></td><td>
 	    <input type="file" name="kandi_cv" id="kandi_cv" onchange="checkFile('#kandi_cv', '#cv_err')">
 	    <span id="cv_err"></span>
-	  </form></br></br>
-	  <b>Lisainfo:</b></br><textarea name="lisainfo" rows="4" cols="40"></textarea></br>
+	  </form></td></tr>
+	  <tr><td><b>Lisainfo:</b></td><td><textarea name="lisainfo" rows="4" cols="40"></textarea></br>
+	  </table></td></tr>
 	  <input type="submit" onclick="checkAll()">
-	</form>
 </body>
 </html>

@@ -163,5 +163,9 @@ font-weight: bold;
 	height:42px;
 }
 
+/* hääletamine */
+#haaletus{
+	min-height: 20px;
+}
 
 

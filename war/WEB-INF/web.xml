@@ -71,5 +71,34 @@
     <servlet-name>CandidateStatistics</servlet-name>
     <url-pattern>/CandidateStatistics</url-pattern>
   </servlet-mapping>
+  
+    
+    <!--HÄÄLETUSTULEMUSE SAAMISEKS-->
+    <servlet>
+        <servlet-name>GetVote</servlet-name>
+        <servlet-class>evalimised.GetVote</servlet-class>
+        <init-param>
+          <param-name/>
+          <param-value/>
+        </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetVote</servlet-name>
+    <url-pattern>/GetVote</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>evalimised.Register</servlet-class>
+    <init-param>
+      <param-value/>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/servlet/Register</url-pattern>
+  </servlet-mapping>
 
 </web-app>

@@ -11,19 +11,18 @@
   <!-- -------- -->
   <link rel="stylesheet" type="text/css" href="stylesheets/stat_stiil.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.2.custom.css" media="screen">
-  <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
-  <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
   <script type="text/javascript" src="scripts/stat_javascript.js"></script>
   <script src="scripts/jquery-ui-1.10.2.custom.js"></script>
   <script src="scripts/autocomplete.js"></script>
-  <!-- Google JS api conflictis meie jquery cookiega -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="scripts/dbquery.js"></script>
-  <script type="text/javascript" src="scripts/jquery.tablesorter.js"></script> 
+  <script type="text/javascript" src="scripts/jquery.tablesorter.js"></script>
+  <script type="text/javascript" src="scripts/test.js"></script> 
+  <script type="text/javascript" src="scripts/dbquery.js"></script> 
   <!-- ------- -->
 </head>
 <body>
 <div id="keha">
-<div id="haaletus"></div>
 <div id="mittePrintida">
 <table>
 <tr>
@@ -71,18 +70,43 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
 </table>
 <input type="submit" value="OTSI" id="showTable">
 </div>
-<table id="candidatetable" class="tablesorter" border="1"> 
+ </td>
+ </tr>
+ </table>
+<!-- ----------------- -->
+<div id="wrapper">
+<div id="tablediv">
+<table id="candidatetable" class="tablesorter"> 
   <thead>
     <tr> 
         <th scope="col">ID</th> 
         <th scope="col">Eesnimi</th> 
         <th scope="col">Perenimi</th> 
-        <th scope="col">Erakond</th>     
-        <th scope="col">Regioon</th> 
-        <th scope="col">VALI!</th>     
+        <th scope="col">Erakond</th>      
     </tr>
     </thead>
+    <tbody>
+    <tr>
+    <td>2</td>
+    <td>Juku</td>
+	<td>Juust</td>
+	<td>Maalaste erakond</td>
+	</tr>
+	<tr>
+    <td>3</td>
+    <td>ASDF</td>
+	<td>qwerty</td>
+	<td>Eestimaa Sinised</td>
+	</tr>
+	<tr>
+    <td>5</td>
+    <td>Heli</td>
+	<td>Kopter</td>
+	<td>Eestimaa Sinised</td>
+	</tr>
+    </tbody>
 </table>
 </div>
+<!-- ------------------ -->
 </body>
 </html>
