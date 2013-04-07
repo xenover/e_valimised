@@ -100,5 +100,19 @@
     <servlet-name>SetCandidature</servlet-name>
     <url-pattern>/SetCandidature</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FirstLastName</servlet-name>
+    <servlet-class>evalimised.FirstLastName</servlet-class>
+    <init-param>
+      <param-value/>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FirstLastName</servlet-name>
+    <url-pattern>/FirstLastName</url-pattern>
+  </servlet-mapping>
 
 </web-app>
