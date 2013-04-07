@@ -1,7 +1,6 @@
 $(document).ready(function() {
   var eesnimed = [];
   var perenimed = [];
-  $.noConflict();
   $.get("/FirstLastName", function(responseJson) {
 	  if(responseJson != null) {
 		var firstLastNames = $.parseJSON(responseJson);
