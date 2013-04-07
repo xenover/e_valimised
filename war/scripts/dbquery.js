@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  var eesnimed = [];
+  var perenimed = [];
+  $.get("/FirstLastName", function(responseJson) {
+	  if(responseJson != null) {
+        $("#haaletus").append(responseJson);
+	  }
+  });
   $("#showTable").click(function(event){
 	var params = "?";
 	var fname = $("#eesnimi");
