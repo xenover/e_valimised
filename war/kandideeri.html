@@ -20,31 +20,26 @@
     <tr><td><b>E-mail*:</b></td><td><input id ="email" name="email" type="text" onblur="checkEmail()"><span id="email_err"></span></td></tr>
     <tr><td><b>Telefon*:</b></td><td><input id="telefon" name="telefon" type="text" onblur="checkPhone()"><span id="telefon_err"></span></td></tr>
     <tr><td><b>Perekonnaseis*:</b></td><td><select name="p_seis" id="p_seis" onblur="checkFamStat()">
-    <option value="tyhi">-Valik-</option>
-    <option value="vall">Vallaline</option>
-    <option value="abi">Abielus</option>
+    <option value=" ">-Valik-</option>
+    <option value="Vallaline">Vallaline</option>
+    <option value="Abielus">Abielus</option>
     </select><span id="p_err"></span></td></tr>
     <tr><td><b>Haridus*:</b></td><td> <select name="haridus" id="haridus" onblur="checkEduc()">
-    <option value="tyhi">-Valik-</option>
-    <option value="pohi">Põhiharidus</option>
-    <option value="kesk">Keskharidus</option>
-    <option value="korg">Kõrgharidus</option>
+    <option value=" ">-Valik-</option>
+    <option value="Põhiharidus">Põhiharidus</option>
+    <option value="Keskharidus">Keskharidus</option>
+    <option value="Kõrgharidus">Kõrgharidus</option>
     </select><span id="har_err"></span></td></tr>
-    <tr><td><b>Amet*:</b></td><td> <input name="amet" id="amet"type="text" onblur="checkJob()"><span id="amet_err"></span></td></tr>
+    <tr><td><b>Amet*:</b></td><td> <input name="amet" id="amet" type="text" onblur="checkJob()"><span id="amet_err"></span></td></tr>
     <tr><td><b>Asutus*:</b></td><td> <input name="asutus" id="asutus" type="text" onblur="checkFacil()"><span id="asutus_err"></span></td></tr>
-    <tr><td><b>Erakond*:</b></td><td><select name="erakond" id="erakond" onblur="checkParty()">
-		<option value="tyhi">-Valik-</option>
-		<option value="ises_part">Iseseseisvuspartei</option>
-		<option value="keskera">Keskerakond</option>
-		<option value="reformi">Reformierakond</option>
-		<option value="rahvaera">Rahvaerakond</option>
-		<option value="vabad_era">Vabaduspartei</option>
-		<option value="vasak">Vasakpartei</option>
-		<option value="krist_dem">Kristlikud Demokraadid</option>
-		<option value="est_roh">Eestimaa Rohelised</option>
-		<option value="isam_res">Isamaa ja Res Publica Liit</option>
-		<option value="sots_dem">Sotisaaldemokraadid</option>
-	  </select><span id="erakond_err"></span></td><tr>	
+    <tr><td><b>Erakond*:</b></td><td>    <select name = "Erakond" id="erakond" onblur="checkParty()">
+	  <option value="">Kõik erakonnad</option>
+    	<option value="Maalaste Erakond">Maalaste Erakond</option>
+		<option value="Eestimaa Sinised">Eestimaa Sinised</option>
+		<option value="Töömeeste Erakond">Töömeeste Erakond</option>
+		<option value="Parema Eesti Partei">Parema Eesti Partei</option>
+		<option value="Eesti Venelaspartei">Eesti Venelaspartei</option>
+  </select><span id="erakond_err"></span></td><tr>	
 	  <tr><td><form action="">
 	  	<label for="pilt"><b>Pilt*:</b></label></td><td>
 	    <input type="file" name="kandi_pilt" id="kandi_pilt" accept="image/*" onchange="checkFile('#kandi_pilt', '#pilt_err')">

@@ -1,9 +1,14 @@
 $(document).ready(function() {
   var eesnimed = [];
   var perenimed = [];
+  $.noConflict();
   $.get("/FirstLastName", function(responseJson) {
 	  if(responseJson != null) {
-        $("#haaletus").append(responseJson);
+		var firstLastNames = $.parseJSON(responseJson);
+		eesnimed = firstLastNames["first_names"];
+		perenimed = firstLastNames["last_names"]
+		$('#eesnimi').autocomplete({source: eesnimed});
+        $('#perenimi').autocomplete({source: perenimed});
 	  }
   });
   $("#showTable").click(function(event){

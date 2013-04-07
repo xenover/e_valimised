@@ -25,6 +25,8 @@ import java.sql.Statement;
 import java.util.Properties;
 
 import com.google.appengine.api.rdbms.AppEngineDriver;
+import com.google.appengine.labs.repackaged.org.json.JSONException;
+import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 public class FirstLastName extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -36,11 +38,15 @@ public class FirstLastName extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<List<String>> info = FirstLastName.getFirstLastNames();
-		Gson gson = new Gson();
-		JsonElement element = gson.toJsonTree(info, new TypeToken<List<String>>() {}.getType());
-		JsonArray jsonArray = element.getAsJsonArray();
-		response.setContentType("application/json");
-		response.getWriter().print(jsonArray);
+		JSONObject returnJson = new JSONObject();
+		try {
+			returnJson.put("first_names", info.get(0).toArray());
+			returnJson.put("last_names", info.get(1).toArray());
+		} catch (JSONException je) {
+			je.printStackTrace();
+		}
+
+		response.getWriter().print(returnJson.toString());
 	}
 
 	
