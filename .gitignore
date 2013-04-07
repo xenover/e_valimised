@@ -1,4 +1,6 @@
 .classpath/*
 .project/*
-gwt-unitCache/*
+.gwt-unitCache/*
 .settings/*
+.test/*
+.test-classes/*

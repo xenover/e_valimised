@@ -88,8 +88,8 @@
   </servlet-mapping>
 
     <servlet>
-    <servlet-name>Register</servlet-name>
-    <servlet-class>evalimised.Register</servlet-class>
+    <servlet-name>SetCandidature</servlet-name>
+    <servlet-class>evalimised.SetCandidature</servlet-class>
     <init-param>
       <param-value/>
       <param-value/>
@@ -97,8 +97,8 @@
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>Register</servlet-name>
-    <url-pattern>/servlet/Register</url-pattern>
+    <servlet-name>SetCandidature</servlet-name>
+    <url-pattern>/SetCandidature</url-pattern>
   </servlet-mapping>
 
 </web-app>
