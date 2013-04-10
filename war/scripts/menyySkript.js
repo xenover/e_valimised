@@ -10,7 +10,19 @@ function sisu(nimi) {
   }
   else if( nimi == "haaletamine")
   {
-    
+	  	voteInfo = "Sa pole veel kellelegi oma häält andnud.";
+		var params = "?id=2" 
+		var url = "/GetVote" + params;
+	    $.get(url ,function(responseJson) {
+	      if(responseJson!=null){
+	    	$("#candidatetable").find("tr:gt(0)").remove();
+	        var table1 = $("#candidatetable");
+		    $.each(responseJson, function(key,value) { 
+		      voteInfo = "Oled andnud oma hääle juba kandidaadile " +  value['first_name'] + " " + value["last_name"] + ". Uue hääle andmisel eelmine hääl tühistatakse."
+		    });
+	      }
+	      $("#haaletus").append(voteInfo);
+	    });
   }
 }
 

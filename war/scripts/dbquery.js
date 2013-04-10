@@ -10,7 +10,7 @@ $(document).ready(function() {
         $('#perenimi').autocomplete({source: perenimed});
 	  }
   });
-  $("#showTable").click(function(event){
+   $("#showTable").click(function(event){
 	var params = "?";
 	var fname = $("#eesnimi");
 	var lname = $("#perenimi");
@@ -44,7 +44,7 @@ $(document).ready(function() {
   
   $("#searchParties").click(function(event){
 		var params = "?";
-		var region = $("#partyRegion");
+		var region = $("#regioon");
 		params += "region=" + region.val(); 
 		var url = "/PartyStatistics" + params;
 	    $.get(url ,function(responseJson) {
@@ -67,7 +67,7 @@ $(document).ready(function() {
 		var lname = $("#perenimi");
 		var id = $("#kandidaadiNr")
 		var party = $("#erakond");
-		var region = $("#candidateRegion");
+		var region = $("#region");
 		params += "fname=" + fname.val() + "&";
 		params += "lname=" + lname.val() + "&";
 	    params += "id=" + id.val() + "&";
@@ -78,7 +78,7 @@ $(document).ready(function() {
 	      if(responseJson!=null){
 	        $("#candidateTable").find("tr:gt(0)").remove();
 	        var table1 = $("#candidateTable");
-		    $.each(responseJson, function(key,value) { 
+		    $.each(responseJson, function(key,value) {
 		      var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
 		      rowNew.children().eq(0).text(value['id']); 
 		      rowNew.children().eq(1).text(value['first_name']); 

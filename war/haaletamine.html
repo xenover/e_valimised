@@ -16,7 +16,6 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="scripts/dbquery.js"></script>
   <script type="text/javascript" src="scripts/jquery.tablesorter.js"></script> 
-  <!-- ------- -->
 </head>
 <body>
 <div id="keha">
@@ -68,8 +67,7 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
 </table>
 <input type="submit" value="OTSI" id="showTable">
 </div>
-<table id="candidatetable" class="tablesorter" border="1"> 
-  <thead>
+<table id="candidatetable" class="sortable" cellpadding="0" cellspacing="0"> 
     <tr> 
         <th scope="col">ID</th> 
         <th scope="col">Eesnimi</th> 
@@ -78,7 +76,6 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
         <th scope="col">Regioon</th> 
         <th scope="col">VALI!</th>     
     </tr>
-    </thead>
 </table>
 </div>
 </body>

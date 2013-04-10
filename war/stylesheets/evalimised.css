@@ -166,6 +166,7 @@ font-weight: bold;
 /* hääletamine */
 #haaletus{
 	min-height: 20px;
+	font-weight: bold;
 }
 
 

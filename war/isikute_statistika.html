@@ -43,7 +43,7 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
 </td>
 <td>Regioon:</br>
 <div><form action = "">
-    <select name="candidateRegion" id="candidateRegion">
+    <select name="region" id="region">
 		<option value="">Kogu Eesti</option>
 		<option value="Harjumaa">Harju maakond</option>
 		<option value="Hiiumaa">Hiiu maakond</option>
@@ -64,13 +64,9 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
 	</form></div></div></td>
 </tr>
 </table>
-<input id="searchCandidates" type="submit" value="OTSI">
+<input type="submit" value="OTSI" id="searchCandidates">
 </div>
-</div> 
- </td>
- </tr>
- </table>
-<div id="wrapper">
+
  <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="candidateTable">
         <th scope="col">ID</th> 
         <th scope="col">Eesnimi</th> 
@@ -80,9 +76,5 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
         <th scope="col">Hääli</th>  
  </table>
 </div>
-<script type="text/javascript">
-var sorter=new table.sorter("candidateTable");
-sorter.init("candidateTable",1);
-</script>
 </body>
 </html>
