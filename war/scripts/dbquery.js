@@ -34,9 +34,12 @@ $(document).ready(function() {
 	      rowNew.children().eq(2).text(value['last_name']); 
 	      rowNew.children().eq(3).text(value['party']);
 	      rowNew.children().eq(4).text(value['region']);
-	      rowNew.children().eq(5).text("VALI!");
+	      var valiTxt = "<input type=\"submit\" onclick=\"vote("+ value['id'] + ")\" class=\"choose\" id=" + value['id'].toString() + " value=\"VALI!\">";
+	      alert(valiTxt);
+	      rowNew.children().eq(5).html(valiTxt);
+//	      $("." + value['id'].toString()).css({"font-weigth":"bold"});
 	      rowNew.appendTo(table1);
-	    });
+	    })
       }
     });
     $("#candidatetable").tablesorter();
@@ -90,5 +93,17 @@ $(document).ready(function() {
 		    });
 	      }
 	    });        
-	  });
+	});
 });
+
+
+function vote(candidate_id)
+{
+	if (confirm("Kas oled kindel, et soovid anda oma hääle valitud kandidaadile?")) {
+	  	var voter_id = 6;
+	  	$.post("/Vote", {voter_id: voter_id, candidate_id: candidate_id});
+	  	sisu("haaletamine");
+	} else {
+	    return;
+	}
+}

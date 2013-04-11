@@ -110,9 +110,19 @@
     </init-param>
   </servlet>
 
+<!--HÄÄLETAMISEKS-->
+    <servlet>
+    <servlet-name>Vote</servlet-name>
+    <servlet-class>evalimised.Vote</servlet-class>
+    <init-param>
+      <param-value/>
+      <param-value/>
+    </init-param>
+  </servlet>
+
   <servlet-mapping>
-    <servlet-name>FirstLastName</servlet-name>
-    <url-pattern>/FirstLastName</url-pattern>
+    <servlet-name>Vote</servlet-name>
+    <url-pattern>/Vote</url-pattern>
   </servlet-mapping>
 
 </web-app>

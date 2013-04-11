@@ -10,4 +10,3 @@ $(document).ready(function() {
     $("#keha").empty();
     $("#keha").load("kandideeritud.html");
   });
-});
