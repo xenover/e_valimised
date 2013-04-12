@@ -35,9 +35,7 @@ $(document).ready(function() {
 	      rowNew.children().eq(3).text(value['party']);
 	      rowNew.children().eq(4).text(value['region']);
 	      var valiTxt = "<input type=\"submit\" onclick=\"vote("+ value['id'] + ")\" class=\"choose\" id=" + value['id'].toString() + " value=\"VALI!\">";
-	      alert(valiTxt);
 	      rowNew.children().eq(5).html(valiTxt);
-//	      $("." + value['id'].toString()).css({"font-weigth":"bold"});
 	      rowNew.appendTo(table1);
 	    })
       }
@@ -102,7 +100,7 @@ function vote(candidate_id)
 	if (confirm("Kas oled kindel, et soovid anda oma hääle valitud kandidaadile?")) {
 	  	var voter_id = 6;
 	  	$.post("/Vote", {voter_id: voter_id, candidate_id: candidate_id});
-	  	sisu("haaletamine");
+	  	location.reload();
 	} else {
 	    return;
 	}

@@ -109,6 +109,11 @@
       <param-value/>
     </init-param>
   </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>FirstLastName</servlet-name>
+    <url-pattern>/FirstLastName</url-pattern>
+  </servlet-mapping>
 
 <!--HÄÄLETAMISEKS-->
     <servlet>
@@ -123,6 +128,21 @@
   <servlet-mapping>
     <servlet-name>Vote</servlet-name>
     <url-pattern>/Vote</url-pattern>
+  </servlet-mapping>
+  
+  <!--HÄÄLE KUSTUTAMISEKS-->
+    <servlet>
+    <servlet-name>DeleteVote</servlet-name>
+    <servlet-class>evalimised.DeleteVote</servlet-class>
+    <init-param>
+      <param-value/>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeleteVote</servlet-name>
+    <url-pattern>/DeleteVote</url-pattern>
   </servlet-mapping>
 
 </web-app>

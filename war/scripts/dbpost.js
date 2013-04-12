@@ -10,3 +10,14 @@ $(document).ready(function() {
     $("#keha").empty();
     $("#keha").load("kandideeritud.html");
   });
+  
+  $("#deleteVote").click(function(event){
+		if (confirm("Kas oled kindel, et soovid hääle tühistada?")) {
+		  	var id = 6;
+		  	$.post("/DeleteVote", {voter_id: id});
+		  	location.reload();
+		} else {
+		    return;
+		}
+  });
+})
