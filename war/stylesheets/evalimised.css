@@ -122,12 +122,13 @@ font-weight: bold;
 
 .statistika
 {
-	visibility:hidden;
+	display: none;
 }
 
  #statistika_tekst
  {
  	position:absolute;
+ 	font-weight: bold;
 	top: 150px;
 	left: 250px;
 	bottom:-20px;
@@ -164,13 +165,36 @@ font-weight: bold;
 }
 
 /* hääletamine */
-#haaletus{
+#haaletamata{
 	min-height: 20px;
 	font-weight: bold;
+	display: none;
 }
+
+#haaletanud{
+	min-height: 20px;
+	font-weight: bold;
+	display: none;
+}
+
 
 #tyhista{
  display: none;
 }
+
+ #ootamistekst
+ {
+ 	position:absolute;
+ 	font-weight: bold;
+	top: 22em;
+	left: 25em;
+ }
+ 
+  #loader_haaletamine
+ {
+ 	position:absolute;
+	top: 24em;
+	left: 27em;
+ }
 
 
