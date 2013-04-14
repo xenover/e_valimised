@@ -144,5 +144,4 @@
     <servlet-name>DeleteVote</servlet-name>
     <url-pattern>/DeleteVote</url-pattern>
   </servlet-mapping>
-
-</web-app>
+  </web-app>

@@ -34,7 +34,6 @@ function sisu(nimi) {
 		      $("#haaletanud").css( "display", "none" );
 	      }
 	    });
-//	  checkVote();
   }
 }
 
