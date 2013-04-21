@@ -144,4 +144,43 @@
     <servlet-name>DeleteVote</servlet-name>
     <url-pattern>/DeleteVote</url-pattern>
   </servlet-mapping>
+  
+  <!--SERVER-->
+    <servlet>
+    <servlet-name>Server</servlet-name>
+    <servlet-class>evalimised.Server</servlet-class>
+    <init-param>
+      <param-value/>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Server</servlet-name>
+    <url-pattern>/Server</url-pattern>
+  </servlet-mapping>
+  
+<!--ISIKU OTSING-->
+<servlet>
+<servlet-name>SearchPerson</servlet-name>
+<servlet-class>evalimised.SearchPerson</servlet-class>
+<init-param>
+   <param-value/>
+   <param-value/>
+</init-param>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>SearchPerson</servlet-name>
+    <url-pattern>/SearchPerson</url-pattern>
+</servlet-mapping>
+
+  <security-constraint>
+     <web-resource-collection>
+       <web-resource-name>Restricted</web-resource-name>
+       <url-pattern>/#statistika/*</url-pattern>
+       <http-method>GET</http-method>
+       <http-method>POST</http-method>
+     </web-resource-collection>
+</security-constraint>
   </web-app>

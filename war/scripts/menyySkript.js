@@ -10,7 +10,6 @@ function sisu(nimi) {
   }
   else if( nimi == "haaletamine")
   {
-
       setTimeout(function(){document.getElementById("ootamistekst").style.visibility="hidden";},1500);
       setTimeout(function(){document.getElementById("loader_haaletamine").style.visibility="hidden";},1500);
       setTimeout(function(){$(".statistika").css( "display", "block" );},1500);
@@ -66,12 +65,6 @@ function checkVote()
       }
       $("#haaletus").append(voteInfo);
     });
-//    channel = new goog.appengine.Channel('{{ token }}');
-//    socket = channel.open();
-//    socket.onopen = onOpened;
-//    socket.onmessage = onMessage;
-//    socket.onerror = onError;
-//    socket.onclose = onClose;
 }
 
 function onOpened() {

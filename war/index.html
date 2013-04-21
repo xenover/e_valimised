@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html manifest="cache.manifest">
+<html manifest="cache.manifest" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>E-valimised: avaleht</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 	<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="/scripts/login.js"></script>
 	<script type="text/javascript" src="scripts/dbpost.js"></script>
+	<script type="text/javascript" src="scripts/dbquery.js"></script>
 	<script type="text/javascript" src="scripts/menyySkript.js"></script>
 	<!-- CHANNEL API -->
 	<script type="text/javascript" src="scripts/detector.js"></script>
@@ -25,14 +27,15 @@
 	</td>
 	</tr>
 	<tr id="mittePrintida">
-		<td><img class="logo" src="files/logo.png" alt="Logo" width="120"></img>
+		<td><img id="logo" class="logo" src="files/logo.png" alt="Logo" width="120"></img>
 			<div id='tekst'>Hääleta Eesti Paremaks!</div>
-			<input class='login' type='image' class="logiSisse" src='files/google.png'>
+			<!--<input class='login' type='image' class="logiSisse" src='files/google.png'>-->
+			
 		</td>
 	  <td id="logged_in_cell">
-	  		<div id='logged_in'>Sisse logitud kasutajana:</div>
-						<a id="user" onclick="sisu(&quot;seaded&quot;)" href="#seaded">Peeter Paan</a>
-			<div id='logout'><a href="seelinkveeleitoota.html">LOGI VÄLJA</a></div>
+			<div id="user"></div>
+			<br>
+			<fb:login-button autologoutlink="true" id="login"></fb:login-button>
 	  </td>
 	</tr>
 	<tr>
@@ -53,7 +56,6 @@
 	<tr>
 	<td id="kontaktid" colspan="3">
 	Kert Pjatkin - kertp@hotmail.com, Taavi Kala - xenover@gmail.com, Tanel Joosep - taneljoosep@gmail.com
-	
 	</td>
 	</tr>
 	</table>
