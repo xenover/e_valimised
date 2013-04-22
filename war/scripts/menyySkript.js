@@ -2,20 +2,28 @@ function sisu(nimi) {
 	jQuery("#keha").empty();
   
   localStorage.getItem('newuser');
-  if(localStorage.getItem('newuser') == "true" ){
-	  jQuery("#keha").load("uuskasutaja.html");
-  }
-  else{
-	  jQuery("#keha").load(nimi + ".html")
+//  if(localStorage.getItem('newuser') == "true" ){
+//	  jQuery("#keha").load("uuskasutaja.html");
+//  }
+//  else{
 	  if(nimi == "statistika")
 	  {
+		  jQuery("#keha").load(nimi + ".html");
 		  setTimeout(function(){document.getElementById("statistika_tekst").style.visibility="hidden";},1500);
 		  setTimeout(function(){document.getElementById("loader").style.visibility="hidden";},1500);
 		  setTimeout(function(){jQuery(".statistika").css( "display", "block" );},1500);
 //		  setTimeout(function(){document.getElementById("chart_div").style.visibility="visible";},1500);
 	  }
+	  // PARANDADA
+	  else if( nimi == "kandideeri" && (localStorage.getItem('token') == 0 || localStorage.getItem('token') == null)){
+		  jQuery("#keha").load("kandideeri_autentimata.html")
+	  }
+	  else if( nimi == "haaletamine" && (localStorage.getItem('token') == 0 || localStorage.getItem('token') == null)){
+		  jQuery("#keha").load("haaletamines.html")
+	  }
 	  else if( nimi == "haaletamine")
 	  {
+		  jQuery("#keha").load(nimi + ".html");
 		  setTimeout(function(){document.getElementById("ootamistekst").style.visibility="hidden";},1500);
 		  setTimeout(function(){document.getElementById("loader_haaletamine").style.visibility="hidden";},1500);
 		  setTimeout(function(){jQuery(".statistika").css( "display", "block" );},1500);
@@ -40,7 +48,10 @@ function sisu(nimi) {
 			  }
 		  });
 	  }
-  }
+	  else{
+		  jQuery("#keha").load(nimi + ".html");
+	  }
+//  }
 }
 
 function navig() {

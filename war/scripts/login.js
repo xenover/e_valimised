@@ -28,19 +28,18 @@ $(document).ready(function() {
 			// do something with response
 			uid = response.authResponse.userID;
 			checkUser();
-			alert("Login sisse");
+			localStorage.setItem('token', response.authResponse.accessToken);
 			location.reload();
 		});
 		FB.Event.subscribe('auth.logout', function(response) {
 			// do something with response
 			localStorage.setItem('newuser',false);
-			alert("Login välja");
+			localStorage.setItem('token', 0);
 			location.reload();
 		});
 	};
 
 	function checkUser(){
-		FB.api(
 				FB.api('/fql', 'GET', {q:'SELECT uid, first_name, last_name FROM user WHERE uid = ' + uid}, function(response){
 					  if (response && response.data)
 					    console.log(response.data);
@@ -59,7 +58,7 @@ $(document).ready(function() {
 							}
 						});
 					});
-		)};
+	};
 
 	// Load the SDK Asynchronously
 	(function(d){

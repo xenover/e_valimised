@@ -9,7 +9,8 @@ $(document).ready(function() {
 		$('#eesnimi').autocomplete({source: eesnimed});
         $('#perenimi').autocomplete({source: perenimed});
 	  }
-  });
+  })
+  
    $("#showTable").click(function(event){
 	var params = "?";
 	var fname = $("#eesnimi");
@@ -91,7 +92,38 @@ $(document).ready(function() {
 		    });
 	      }
 	    });        
-	});   
+	});  
+  
+  $("#showTableLoggedOut").click(function(event){
+		var params = "?";
+		var fname = $("#eesnimi");
+		var lname = $("#perenimi");
+		var id = $("#kandidaadiNr")
+		var party = $("#erakond");
+		var region = $("#regioon");
+		params += "fname=" + fname.val() + "&";
+		params += "lname=" + lname.val() + "&";
+	    params += "id=" + id.val() + "&";
+		params += "party=" + party.val() + "&";
+	  	params += "region=" + region.val(); 
+		var url = "/PopulateTable" + params;
+	    $.get(url ,function(responseJson) {
+	      if(responseJson!=null){
+	    	$("#candidatetable").find("tr:gt(0)").remove();
+	        var table1 = $("#candidatetable");
+		    $.each(responseJson, function(key,value) { 
+		      var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td></tr>");
+		      rowNew.children().eq(0).text(value['id']); 
+		      rowNew.children().eq(1).text(value['first_name']); 
+		      rowNew.children().eq(2).text(value['last_name']); 
+		      rowNew.children().eq(3).text(value['party']);
+		      rowNew.children().eq(4).text(value['region']);
+		      rowNew.appendTo(table1);
+		    })
+	      }
+	    });
+	    $("#candidatetable").tablesorter();
+	  });
 });
 
 
