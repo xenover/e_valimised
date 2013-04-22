@@ -4,3 +4,6 @@
 .settings/*
 .test/*
 .test-classes/*
+src/seltsimehed/*
+war/evalimised/*
+war/seltsimehed/*
