@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 	<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
 	<script type="text/javascript" src="/scripts/login.js"></script>
 	<script type="text/javascript" src="scripts/dbpost.js"></script>
 	<script type="text/javascript" src="scripts/dbquery.js"></script>
@@ -13,7 +14,6 @@
 	<!-- CHANNEL API -->
 	<script type="text/javascript" src="scripts/detector.js"></script>
 	<script type="text/javascript" src="scripts/md5.js"></script>
-	<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
 	<script type="text/javascript" src="/_ah/channel/jsapi"></script>  
 	<!-- MUU -->
 </head>
@@ -35,15 +35,15 @@
 	  <td id="logged_in_cell">
 			<div id="user"></div>
 			<br>
-			<fb:login-button autologoutlink="true" id="login"></fb:login-button>
+			<div id="login"></div><fb:login-button autologoutlink="true" id="login"></fb:login-button></div>
 	  </td>
 	</tr>
 	<tr>
 	<td id="menu" colspan="3">
-	<a class="menu_item" id="avaleht" onclick="sisu(&quot;avaleht&quot;)" href="#avaleht">AVALEHT</a>
-	<a class="menu_item" id="haaletamine" onclick="sisu(&quot;haaletamine&quot;)" href="#haaletamine">HÄÄLETAMINE<a>
-	<a class="menu_item" id="statistika" onclick="sisu(&quot;statistika&quot;)" href="#statistika">STATISTIKA</a>
-	<a class="menu_item" id="kandideeri" onclick="sisu(&quot;kandideeri&quot;)" href="#kandideeri">KANDIDEERI!</a>
+	<a class="menu_item" id="avaleht" onclick="sisu(&quot;avaleht&quot)" href="#avaleht">AVALEHT</a>
+	<a class="menu_item" id="haaletamine" onclick="sisu(&quot;haaletamine&quot)" href="#haaletamine">HÄÄLETAMINE<a>
+	<a class="menu_item" id="statistika" onclick="sisu(&quot;statistika&quot)" href="#statistika">STATISTIKA</a>
+	<a class="menu_item" id="kandideeri" onclick="sisu(&quot;kandideeri&quot)" href="#kandideeri">KANDIDEERI!</a>
 
 	</td>
 	</tr>

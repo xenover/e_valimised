@@ -197,4 +197,10 @@ font-weight: bold;
 	left: 27em;
  }
 
+/* uuskasutaja */
+#teavitus{
+	min-height: 20px;
+	font-weight: bold;
+	display: none;
+}
 
