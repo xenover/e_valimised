@@ -29,7 +29,7 @@ function sisu(nimi) {
 		  setTimeout(function(){jQuery(".statistika").css( "display", "block" );},1500);
 		  var params = "?id=6" 
 			  var url = "/GetVote" + params;
-		  	jQuery.get(url ,function(responseJson) {
+		  	  jQuery.get(url ,function(responseJson) {
 			  if(responseJson!=""){
 				  jQuery("#candidatetable").find("tr:gt(0)").remove();
 				  var table1 = jQuery("#candidatetable");
@@ -38,6 +38,7 @@ function sisu(nimi) {
 				  jQuery("#haaletanud").css( "display", "block" );
 				  jQuery.each(responseJson, function(key,value) { 
 					  var voteInfo = "Oled andnud oma hääle juba kandidaadile " +  value['first_name'] + " " + value["last_name"] + ". Uue hääle andmisel eelmine hääl tühistatakse.";
+					  jQuery("#haaletanud").empty();
 					  jQuery("#haaletanud").append(voteInfo);
 				  });
 			  }

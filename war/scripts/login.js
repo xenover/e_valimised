@@ -4,7 +4,7 @@ $(document).ready(function() {
 //	Additional JS functions here
 	window.fbAsyncInit = function() {
 		FB.init({
-			appId      : 	323774344414844, // App ID
+			appId      : 323774344414844, // App ID
 			channelUrl : '//test.xenover.appspot.com/channel.html', // Channel File
 			status     : true, // check login status
 			cookie     : true, // enable cookies to allow the server to access the session

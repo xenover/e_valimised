@@ -1,20 +1,20 @@
-$(document).ready(function() {
-  $("#submitCandidature").click(function(event){
+jQuery(document).ready(function() {
+  jQuery("#submitCandidature").click(function(event){
   	var id = 6;
-  	var family = $("#p_seis");
-  	var education = $("#haridus");
-  	var job = $("#amet");
-  	var institution = $("#asutus");
-  	var party = $("#erakond");
-  	$.post("/SetCandidature", {id: id, family: family.val(), education: education.val(), job: job.val(), institution: institution.val(), party: party.val()});
-    $("#keha").empty();
-    $("#keha").load("kandideeritud.html");
+  	var family = jQuery("#p_seis");
+  	var education = jQuery("#haridus");
+  	var job = jQuery("#amet");
+  	var institution = jQuery("#asutus");
+  	var party = jQuery("#erakond");
+  	jQuery.post("/SetCandidature", {id: id, family: family.val(), education: education.val(), job: job.val(), institution: institution.val(), party: party.val()});
+    jQuery("#keha").emhaaletaminepty();
+    jQuery("#keha").load("kandideeritud.html");
   });
   
-  $("#deleteVote").click(function(event){
+  jQuery("#deleteVote").click(function(event){
 		if (confirm("Kas oled kindel, et soovid hääle tühistada?")) {
 		  	var id = 6;
-		  	$.post("/DeleteVote", {voter_id: id});
+		  	jQuery.post("/DeleteVote", {voter_id: id});
 		  	location.reload();
 		} else {
 		    return;
