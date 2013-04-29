@@ -13,9 +13,15 @@ jQuery(document).ready(function() {
   
   jQuery("#deleteVote").click(function(event){
 		if (confirm("Kas oled kindel, et soovid hääle tühistada?")) {
-		  	var id = 6;
-		  	jQuery.post("/DeleteVote", {voter_id: id});
-		  	location.reload();
+			id = 6;
+		  	var request = jQuery.post("/DeleteVote", {voter_id: id});
+		  	console.log("Päring tehtud");
+////		  	location.reload();
+//		    // callback handler that will be called on success
+		    request.done(function (response, textStatus, jqXHR){
+		        // log a message to the console
+		        location.reload();
+		    });
 		} else {
 		    return;
 		}
