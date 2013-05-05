@@ -1,15 +1,16 @@
 jQuery(document).ready(function() {
+	jQuery.noConflict();
   var eesnimed = [];
   var perenimed = [];
-//  jQuery.get("/FirstLastName", function(responseJson) {
-//	  if(responseJson != null) {
-//		var firstLastNames = jQuery.parseJSON(responseJson);
-//		eesnimed = firstLastNames["first_names"];
-//		perenimed = firstLastNames["last_names"]
-//		jQuery('#eesnimi').autocomplete({source: eesnimed});
-//        jQuery('#perenimi').autocomplete({source: perenimed});
-//	  }
-//  })
+  jQuery.get("/FirstLastName", function(responseJson) {
+	  if(responseJson != null) {
+		var firstLastNames = jQuery.parseJSON(responseJson);
+		eesnimed = firstLastNames["first_names"];
+		perenimed = firstLastNames["last_names"]
+		jQuery('#eesnimi').autocomplete({source: eesnimed});
+        jQuery('#perenimi').autocomplete({source: perenimed});
+	  }
+  });
   
    jQuery("#showTable").click(function(event){
 	var params = "?";
@@ -58,6 +59,7 @@ jQuery(document).ready(function() {
 		      rowNew.children().eq(0).text(value['name']); 
 		      rowNew.children().eq(1).text(value['votes']); 
 		      rowNew.appendTo(table1);
+		      console.log("Sain erakonna");
 		    });
 	      }
 	    });        
