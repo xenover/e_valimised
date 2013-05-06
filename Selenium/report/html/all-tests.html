@@ -1,0 +1,44 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: All Tests</title>
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+</head>
+<body onload="open('allclasses-frame.html','classListFrame')">
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>All Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Class</th><th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/appspot/xenover/test/0_ErakondadeStatistikaTest.html">ErakondadeStatistikaTest</a></td><td><a name="testErakondade_statistika"></a><a href="com/appspot/xenover/test/0_ErakondadeStatistikaTest.html#testErakondade_statistika">testErakondade_statistika</a></td><td>Success</td><td></td><td>32.021</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/appspot/xenover/test/1_HaaletamineTest.html">HaaletamineTest</a></td><td><a name="testHaaletamine"></a><a href="com/appspot/xenover/test/1_HaaletamineTest.html#testHaaletamine">testHaaletamine</a></td><td>Success</td><td></td><td>27.333</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/appspot/xenover/test/2_IsikuteStatistikaTest.html">IsikuteStatistikaTest</a></td><td><a name="testIsikute_statistika"></a><a href="com/appspot/xenover/test/2_IsikuteStatistikaTest.html#testIsikute_statistika">testIsikute_statistika</a></td><td>Error</td><td>Element is no longer attached to the DOM
+Command duration or timeout: 29 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '3.5.0-21-generic', java.version: '1.7.0_21'
+Session ID: dd29b7a4-45df-4c22-a884-e2fec484bb8e
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=LINUX, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=20.0}]<br>
+<br>
+<code>com.thoughtworks.selenium.SeleniumException: Element is no longer attached to the DOM<br>Command duration or timeout: 29 milliseconds<br>For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html<br>Build info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'<br>System info: os.name: 'Linux', os.arch: 'amd64', os.version: '3.5.0-21-generic', java.version: '1.7.0_21'<br>Session ID: dd29b7a4-45df-4c22-a884-e2fec484bb8e<br>Driver info: org.openqa.selenium.firefox.FirefoxDriver<br>Capabilities [{platform=LINUX, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=20.0}]<br>	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:44)<br>	at org.openqa.selenium.internal.seleniumemulation.Timer.run(Timer.java:40)<br>	at org.openqa.selenium.WebDriverCommandProcessor.execute(WebDriverCommandProcessor.java:140)<br>	at org.openqa.selenium.WebDriverCommandProcessor.doCommand(WebDriverCommandProcessor.java:70)<br>	at com.thoughtworks.selenium.DefaultSelenium.type(DefaultSelenium.java:317)<br>	at com.appspot.xenover.test.IsikuteStatistikaTest.testIsikute_statistika(Unknown Source)<br>Caused by: org.openqa.selenium.StaleElementReferenceException: Element is no longer attached to the DOM<br>Command duration or timeout: 29 milliseconds<br>For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html<br>Build info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'<br>System info: os.name: 'Linux', os.arch: 'amd64', os.version: '3.5.0-21-generic', java.version: '1.7.0_21'<br>Session ID: dd29b7a4-45df-4c22-a884-e2fec484bb8e<br>Driver info: org.openqa.selenium.firefox.FirefoxDriver<br>Capabilities [{platform=LINUX, databaseEnabled=true, cssSelectorsEnabled=true, javascriptEnabled=true, acceptSslCerts=true, handlesAlerts=true, browserName=firefox, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=20.0}]<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)<br>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:187)<br>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)<br>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)<br>	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)<br>	at org.openqa.selenium.remote.RemoteWebElement.getTagName(RemoteWebElement.java:117)<br>	at org.openqa.selenium.internal.seleniumemulation.Type.handleSeleneseCommand(Type.java:57)<br>	at org.openqa.selenium.internal.seleniumemulation.Type.handleSeleneseCommand(Type.java:1)<br>	at org.openqa.selenium.internal.seleniumemulation.SeleneseCommand.apply(SeleneseCommand.java:38)<br>Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is no longer attached to the DOM<br>Build info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'<br>System info: os.name: 'Linux', os.arch: 'amd64', os.version: '3.5.0-21-generic', java.version: '1.7.0_21'<br>Driver info: driver.version: unknown<br>	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web_element_cache.js:7352)<br>	at &lt;anonymous class&gt;.Utils.getElementAt(file:///tmp/anonymous3121148019472270075webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:6946)<br>	at &lt;anonymous class&gt;.WebElement.getElementTagName(file:///tmp/anonymous3121148019472270075webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:9894)<br>	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///tmp/anonymous3121148019472270075webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10421)<br>	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///tmp/anonymous3121148019472270075webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10426)<br>	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///tmp/anonymous3121148019472270075webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10366)<br>
+</code></td><td>18.520</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/appspot/xenover/test/3_KandidatuurTest.html">KandidatuurTest</a></td><td><a name="testUntitled"></a><a href="com/appspot/xenover/test/3_KandidatuurTest.html#testUntitled">testUntitled</a></td><td>Success</td><td></td><td>72.481</td>
+</tr>
+</table>
+</body>
+</html>
