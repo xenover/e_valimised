@@ -4,18 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>E-valimised: hääleta</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/evalimised.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-	<!-- -------- -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/stat_stiil.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.2.custom.css" media="screen">
-	<script type="text/javascript" src="scripts/stat_javascript.js"></script>
-	<script src="scripts/jquery-ui-1.10.2.custom.js"></script>
-	<script type="text/javascript" src="scripts/dbquery.js"></script>
-	<!-- ------- -->
 </head>
 <body>
-1814
 <div id="keha">
 <div id="mittePrintida">
 <table>
@@ -75,29 +65,7 @@ Kandidaadi number:<br> <input type="text" name="kandidaadiNr" id="kandidaadiNr">
         <th scope="col">Hääli</th>  
  </table>
 </div>
- <script>
-    channel = new goog.appengine.Channel('{{ token }}');
-    socket = channel.open();
-    socket.onopen = onOpened;
-    socket.onmessage = onMessage;
-    socket.onerror = onError;
-    socket.onclose = onClose;
-    
-    function onOpened() {
-        alert("Channel opened!");
-    }
-
-    function onMessage(msg) {
-        alert(msg.data);
-    }
-
-    function onMessage(err) {
-        alert(err);
-    }
-
-    function onClose() {
-        alert("Channel closed!");
-    }
-  </script>
+  <script type="text/javascript" src="scripts/stat_javascript.js"></script>
+	<script type="text/javascript" src="scripts/dbquery.js"></script>
 </body>
 </html>
